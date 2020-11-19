@@ -57,8 +57,6 @@ app.get('/', function (req, res) {
 connection.init();
 routes.configure(app);
 
-
-
 const hostname = 'threesainfoway.net';
 
 const cert = fs.readFileSync('./sslforfree/certificate.crt');
