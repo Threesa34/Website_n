@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>Threesa Infoway Pvt. Ltd.</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="Threesa Infoway Pvt. Ltd. helps you to connect with world.we provide unbreakable high speed internet connectivity for you home or organization">
+<meta name="keywords" content="internet service providers,internet service provider near me,internet service provider in thane,internet service in thane,wifi service near me,wifi service provider near me,wifi services,Broadband Internet Service,broadband plans in thane,broadband service near me,broadband in thane,wireless internet service providers near me,Internet Service Providers For Corporate,internet service providers for home,ftth internet service provider,internet leased line service,leased line providers in thane">
+   <meta name="google" content="notranslate"/>
+    <link rel="shortcut icon" href="./assets/img/Threesa_Logo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+<link href="https://file.myfontastic.com/JpmxZCFcddDr2e5EYRHXJ8/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/preload.min.css?v=20200726">
+    <link rel="stylesheet" href="assets/css/sweetalert.css?v=20200726">
+    <link rel="stylesheet" href="assets/css/plugins.min.css?v=20200726">
+    <link rel="stylesheet" href="assets/css/style.red-500.min.css?v=20200726">
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css?v=20200726" id="ms-boxed" disabled="">
+    <script src="angulerjs/angular.min.js?v=20200726"></script>
+    <script src="angulerjs/angular-sanitize.min.js?v=20200726"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-sanitize.min.js"></script> -->
+    <script src="angulerjs/ui-bootstrap-tpls-0.14.3.min.js?v=20200726"></script>
+
+    <script src="angulerjs/sweetalert.js?v=20200726"></script>
+   
+  </head>
+
+  <body>
+    <!-- <a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand">
+      <i class="fa fa-gears"></i>
+    </a> -->
+    <div id="ms-preload" class="ms-preload">
+      <div id="status">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ms-site-container">
+      <!-- Modal -->
+      <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+          <div class="modal-content">
+            <div class="modal-header d-block shadow-2dp no-pb">
+              <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="zmdi zmdi-close"></i>
+                </span>
+              </button>
+              <div class="modal-title text-center">
+                 <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+                <h3 class="no-m ms-site-title"><strong>Threesa Infoway</strong></h3>
+              </div>
+
+              <div class="modal-header-tabs text-center" ng-if="urlParameters['th'] && urlParameters['th'] =='5RNya0RBZgMPtxpN3BrLhW9azAKNIP5FxpD201xhSI='">
+                <strong><h4><i class="fa fa-phone" aria-hidden="true"></i> New Enquiry</h4></strong>
+              </div>
+
+              <div class="modal-header-tabs" ng-hide="urlParameters['th'] && urlParameters['th'] =='5RNya0RBZgMPtxpN3BrLhW9azAKNIP5FxpD201xhSI='">
+                <ul class="nav nav-tabs nav-tabs-full nav-tabs-2 nav-tabs-primary" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple">
+                      <i class="zmdi zmdi-account"></i>Enquiry</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                      <i class="zmdi zmdi-dns"></i>Complaint</a>
+                  </li>
+               
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+                  <form autocomplete="off">
+                    <fieldset>
+                     <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user-r"><span style="color:black">Name</span></label>
+                          <input type="text" style="color:black"  id="ms-form-user-r" ng-model="customer.customername" class="form-control"  /> </div>
+                      </div>
+					  <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-phone"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-r"><span style="color:black">Mobile No.</span></label>
+                          <input type="number" ng-model="customer.mobile1"  id="ms-form-pass-r" class="form-control" > </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email-r"><span style="color:black">Email ID</span></label>
+                          <input type="email"   ng-model="customer.email" id="ms-form-email-r" class="form-control" > </div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-dot-circle"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Address</span></label>
+                          <input type="text" ng-model="customer.address" id="ms-form-pass-rn" class="form-control" > </div>
+                      </div>
+					    <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-comment-outline"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Message</span></label>
+                          <input type="text" ng-model="customer.custome_message" id="ms-form-pass-rn" class="form-control"> </div>
+                      </div>
+					 <center> <a href="javascript:void(0)" ng-click="AddNewEnquiry()" class="wave-effect-light btn btn-raised btn-google">
+                     Submit</a></center>
+                    </fieldset>
+                  </form>
+                 
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+                  <form>
+                    <fieldset>
+					    <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user-r"><span style="color:black">Register Username</span></label>
+                          <input type="text" style="color:black"  ng-model="complaint.customer"   id="ms-form-user-r" class="form-control"  /> </div>
+                      </div>
+					  <div class="form-group label-floating">
+                        <div class="input-group">z
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email-r"><span style="color:black">Address</span></label>
+                          <input type="email" id="ms-form-email-r" ng-model="complaint.address"  class="form-control" > </div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-wifi-off"></i>
+                          </span>
+							<label class="control-label" for="ms-form-pass-rn"><span style="color:black">Isuue</span></label>      
+							<select ng-model="complaint.issue" class="form-control md-1" required>
+												<option value="" selected disabled></option>
+												<option value="651 Error occur">651 Error occur</option>
+												<option value="691 Error occur">691 Error occur</option>
+												<option value="shifting">shifting</option>
+												<option value="Internet is not working due to some reason">internet is not working due to some reason</option>
+												<option value="Router reset">Router reset</option>
+												<option value="Wire problem">Wire problem</option>
+												<option value="Other">Other problem</option>
+							</select>
+ </div>
+                      </div>
+					    <div class="form-group label-floating" ng-if="complaint.issue == 'Other'">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-comment-outline"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Other Issue</span></label>
+                          <input type="text" ng-model="complaint.otherissue" id="ms-form-pass-rn" class="form-control"  /> </div>
+                      </div>
+					 <center> <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-google" ng-click="AddNewComplaints()">
+                     Submit</a></center>
+                 </fieldset>
+                  </form>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+                  <fieldset>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-account"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-user-re">Username</label>
+                        <input type="text" id="ms-form-user-re" class="form-control"> </div>
+                    </div>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-email"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-email-re">Email</label>
+                        <input type="email" id="ms-form-email-re" class="form-control"> </div>
+                    </div>
+                    <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+                  </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+	  
+	  
+	  
+	   <div class="modal modal-primary" id="modal_Enquiries" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+          <div class="modal-content">
+            <div class="modal-header d-block shadow-2dp no-pb">
+              <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="zmdi zmdi-close"></i>
+                </span>
+              </button>
+              <div class="modal-title text-center">
+                 <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+                <h3 class="no-m ms-site-title"><strong>Threesa Infoway</strong></h3>
+              </div>
+              <div class="modal-header-tabs">
+                <h5 class="col-md-12">{{customer.comment}}</h5>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+                  <form autocomplete="off">
+                    <fieldset>
+                     <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user-r"><span style="color:black">Name</span></label>
+                          <input type="text" id="ms-form-user-r" ng-model="customer.customername" class="form-control"  /> </div>
+                      </div>
+					  <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-phone"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-r"><span style="color:black">Mobile No.</span></label>
+                          <input type="number" ng-model="customer.mobile1"  id="ms-form-pass-r" class="form-control" > </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email-r"><span style="color:black">Email ID</span></label>
+                          <input type="email"   ng-model="customer.email" id="ms-form-email-r" class="form-control" > </div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-dot-circle"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Address</span></label>
+                          <input type="text" ng-model="customer.address" id="ms-form-pass-rn" class="form-control" > </div>
+                      </div>
+					    <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-comment-outline"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn-enq"><span style="color:black">Message</span></label>
+                          <input type="text" ng-model="customer.custome_message" id="ms-form-pass-rn-enq" class="form-control" > </div>
+                      </div>
+					 <center> <a href="javascript:void(0)" ng-click="AddNewEnquiry()" class="wave-effect-light btn btn-raised btn-google" data-dismiss="modal">
+                     Submit</a></center>
+                    </fieldset>
+                  </form>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+
+
+      <div class="modal fade" id="modal_Enquiries_frenchisies" role="dialog">
+        <div class="modal-dialog modal-lg">
+        
+          <!-- Modal content-->
+          <div class="modal-content modalbg">
+            <div class="modal-body">
+              
+             
+              
+
+              <div class="col-md-6 col-lg-6 pull-left">
+
+                <div class="row text-white">
+                  <h3 class="text-white">Want to start new business in internet?</h3>
+
+                  <p class="quotes"><span class="heading">Threesa Infoway</span> is the best for your business .</p>
+                </div>
+                
+              </div>
+              <div  class="col-md-6 col-lg-6 col-xs-12 col-12 pull-right bgfade">
+              <form autocomplete="off">
+                <fieldset>
+                 <div class="form-group label-floating">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-account"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-user-r"><span style="color:black">Name</span></label>
+                      <input type="text" id="ms-form-user-r" ng-model="customer.customername" class="form-control"  ng-focus="disablepopuphiden()"/> </div>
+                  </div>
+        <div class="form-group label-floating">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-phone"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-pass-r"><span style="color:black">Mobile No.</span></label>
+                      <input type="text" ng-model="customer.mobile1"  id="ms-form-pass-r" class="form-control" ng-focus="disablepopuphiden()"> </div>
+                  </div>
+                  <div class="form-group label-floating">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-email"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-email-r"><span style="color:black">Email ID</span></label>
+                      <input type="email"   ng-model="customer.email" id="ms-form-email-r" class="form-control" ng-focus="disablepopuphiden()"> </div>
+                  </div>
+                  
+                  <div class="form-group label-floating">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-dot-circle"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Address</span></label>
+                      <input type="text" ng-model="customer.address" id="ms-form-pass-rn" class="form-control" ng-focus="disablepopuphiden()"> </div>
+                  </div>
+          <div class="form-group label-floating">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="zmdi zmdi-comment-outline"></i>
+                      </span>
+                      <label class="control-label" for="ms-form-pass-rn-enq"><span style="color:black">Message</span></label>
+                      <input type="text" ng-model="customer.custome_message" id="ms-form-pass-rn-enq" class="form-control" ng-focus="disablepopuphiden()"> </div>
+                  </div>
+       <center> <a href="javascript:void(0)" ng-click="AddNewEnquiry()" classz="wave-effect-light btn btn-raised btn-google">
+                 Submit</a></center>
+                </fieldset>
+              </form>
+            </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+
+
+      
+	   <div class="modal modal-primary" id="modal_Enquiries_frenchisies1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog animated zoomIn animated-3x modal-ml" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-block shadow-2dp no-pb">
+            <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">
+                <i class="zmdi zmdi-close"></i>
+              </span>
+            </button>
+            <div class="modal-title text-center">
+               <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+              <h3 class="no-m ms-site-title"><strong>Threesa Infoway</strong></h3>
+            </div>
+            <div class="modal-header-tabs">
+              <h5 class="col-md-12">Start your business with Threesainfoway</h5>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+	  
+	  
+      <header class="ms-header ms-header-white">
+        <!--ms-header-primary-->
+        <div class="container container-full">
+          <div class="ms-title">
+            <!--   <img  src="/assets/img/threesa_logo_white.png"> </img>
+              <h1 style="margin-right:10px;" class="animated fadeInRight animation-delay-6">
+                <span> Threesa </span>&nbsp;Infoway &nbsp;<font size="3px">Pvt.&nbsp;Ltd.</font>
+              </h1> -->
+			  
+			  
+			   <a class="navbar-brand" onclick="window.location.href = `http://threesainfoway.net`">
+			   <img  src="/assets/img/threesa_logo_white.png"> </img>
+              <h1 style="margin-right:10px;" class="animated fadeInRight animation-delay-6">
+                <span> Threesa &nbsp; Infoway &nbsp; Pvt. &nbsp; Ltd.</span>
+              </h1> 
+            </a>
+           
+          </div>
+
+        </div>
+      </header>
+      <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+        <div class="container container-full">
+          <div class="navbar-header">
+             <a class="navbar-brand" href="index.html">
+             <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+              <span class="ms-title">
+                <strong>Threesa &nbsp; Infoway &nbsp; Pvt. &nbsp; Ltd. </strong> 
+              </span>
+            </a>
+			  <a href="javascript:void(0)" class="ms-toggle-left btn-navbar-menu hidden-lg hidden-md">
+            <i class="zmdi zmdi-menu"></i>
+          </a>
+          </div>
+         
+		 
+		 <div class="collapse navbar-collapse" id="ms-navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown active">
+                  
+                <a href="#" onclick="window.location.href = `http://threesainfoway.net`" class="nav-link dropdown-toggle animated fadeIn animation-delay-7"  role="button" aria-haspopup="true" aria-expanded="false" data-name="home" >Home
+                </a>
+            </li>
+            </ul>
+          </div>
+         
+        
+     
+            
+        </div>
+        <!-- container -->
+      </nav>
+      
+
+      <div class="container">
+        <h3>Terms and Conditions</h3>
+
+        <ul>
+            <li>
+                <strong>CHARGES</strong>
+                <ul>
+                    <li>The installation and subscription charges payable by the Customer to THREESA INFOWAY PVT. LTD at the time of installation.</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>PAYMENT TERMS</strong>
+              <ul>
+                  <li>The pricing schedule for the THREESA INFOWAY PVT. LTD Services is set, Fees are not refundable once paid. All invoices are due when issued. If payment is not received, THREESA INFOWAY PVT. LTD reserves the right to suspend or terminate access to the Customer's service without notice in the event payment is not timely made.</li>
+
+                  <li>The Customer agrees to pay THREESA INFOWAY PVT. LTD the subscription charges in full  including applicable taxes by the due date specified in the invoice.</li>
+
+                  <li>THREESA INFOWAY PVT. LTD will issue its first invoice for the service on the effective date. From then on invoices will be recurring thereafter on a monthly or yearly basis depending on the type of service the Customer has subscribed to. </li>
+
+                  <li>All services are on a prepay basis and should be paid for in advance before the service is activated or as invoiced.</li>
+            </ul>
+          </li>
+          <li>
+              <strong>ONLINE REFUND</strong>
+              <ul>
+                  <li>In case the Bank Account appears to be debited, ensure that he/ she does not make the payment twice and immediately thereafter contact  the Institute via e-mail or any other mode of contact as provided by  the Institute to confirm payment.</li>
+
+                  <li>In case the Bank Account is not debited, the User may initiate a fresh transaction to make payment.</li>
+
+                  <li>In case the Bank Account is debited twice the amount, the User will get the refund of 2nd amount for yearly user , for monthly user amount will be adjusted to the next renewal.</li>
+              </ul>
+          </li>
+        </ul>
+    </div>
+     
+	 
+	  
+	 
+	 
+	 
+      <aside class="ms-footbar">
+        <div class="container" id="contact">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 ms-footer-col">
+				 <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user-r"><span style="color:white">Name</span></label>
+                          <input type="text"  id="ms-form-user-r" class="form-control"  /> </div>
+                      </div>
+					  <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-phone"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-r"><span style="color:white">Mobile No.</span></label>
+                          <input type="number"  id="ms-form-pass-r" class="form-control" > </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email-r"><span style="color:white">Email ID</span></label>
+                          <input type="email" id="ms-form-email-r" class="form-control" > </div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-dot-circle"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:white">Subject</span></label>
+                          <input type="text" id="ms-form-pass-rn" class="form-control" > </div>
+                      </div>
+					    <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-comment-outline"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:white">Message/Address</span></label>
+                          <input type="text" id="ms-form-pass-rn" class="form-control"> </div>
+                      </div>
+                      <button class="btn btn-raised btn-block btn-primary">SEND</button>
+         
+            </div>
+           <div class="col-lg-7 col-md-7 ms-footer-col" style="background:red;">
+           <div class="row">
+		    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15069.474781095545!2d72.9638529!3d19.2227569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f5f3337bac16504!2sThreesa+Broadband!5e0!3m2!1sen!2sin!4v1520418241301"  frameborder="0" style="border:0;width:100rem;height:500px;" allowfullscreen></iframe>
+		   </div>
+		   </div>
+		   </div>
+		    <div class="row">
+            <div class="col-lg-12 col-md-12 ms-footer-col ">
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-title">
+                   <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+                  <h3 class="no-m ms-site-title">
+                    <span>Threesa Infoway </span> <font size="4px"> Pvt. Ltd.</font>
+                  </h3>
+                </div>
+                <address class="no-mb">
+                  <p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Shop No.4, 1st Floor, Anand Laghu Sankul, Near Siddhachal Phase 4, Vasant Vihar, Thane, Maharashtra, India-400610</p>
+                 
+                  <p>
+                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                    <a href="mailto:info@threesainfoway.net">info@threesainfoway.net</a> &nbsp; <i class="color-royal-light zmdi zmdi-phone mr-1"></i>022-68383838 &nbsp; <i class="color-success-light fa fa-fax mr-1"></i>9768635000 / 8652769000
+                  </p>
+                </address>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Social Media</h3>
+                <div class=" row ms-footbar-social">
+                  <a href="https://www.facebook.com/theersa.infoway" target="_blank" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                  <a href="https://twitter.com/Tinfoway" target="_blank" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+                <!--   <a href="javascript:void(0)" class="btn-circle btn-youtube">
+                    <i class="zmdi zmdi-youtube-play"></i>
+                  </a> -->
+                  <br>
+                  <!-- <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a> -->
+                  <a href="https://www.instagram.com/threesainfoway/" target="_blank" class="btn-circle btn-instagram">
+                    <i class="zmdi zmdi-instagram"></i>
+                  </a>
+                  <!-- <a href="javascript:void(0)" class="btn-circle btn-github">
+                    <i class="zmdi zmdi-github"></i>
+                  </a> -->
+                </div>
+                <div class="ms-footbar-block">
+                    <a href="./privacypolicy.html">Privacy Policy</a> &nbsp;| &nbsp;
+                  <a href="./terms_conditions.html">Terms & Conditions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+		   
+        </div>
+      </aside>
+      <footer class="ms-footer">
+        <div class="container">
+          <p>Copyright &copy; Threesa Infoway Pvt. Ltd. 2018</p>
+        </div>
+      </footer>
+      <div class="btn-back-top">
+        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+          <i class="zmdi zmdi-long-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+      <div class="sb-slidebar-container">
+       <header class="ms-slidebar-header">
+          
+          <div class="">
+          
+            <div class="ms-slidebar-t">
+              <center>
+			   <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+			  </center>
+              <h3 class="col-sm-12 col-12">
+               <strong style="color:white">Threesa Infoway Pvt. Ltd.</strong>
+              </h3>
+            </div>
+          </div>
+        </header> 
+
+      </div>
+    </div>
+   <script src="assets/js/plugins.min.js?v=20200726"></script>
+    <script src="assets/js/app.min.js?v=20200726"></script>
+    <script src="assets/js/configurator.min.js?v=20200726"></script>
+    <script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="assets/js/index.js?v=20200726"></script>
+   
+  </body>
+</html>

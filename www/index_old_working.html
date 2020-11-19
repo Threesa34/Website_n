@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>Threesa Infoway Pvt. Ltd.</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="Threesa Infoway Pvt. Ltd. helps you to connect with world.we provide unbreakable high speed internet connectivity for you home or organization">
+<meta name="keywords" content="internet service providers,internet service provider near me,internet service provider in thane,internet service in thane,wifi service near me,wifi service provider near me,wifi services,Broadband Internet Service,broadband plans in thane,broadband service near me,broadband in thane,wireless internet service providers near me,Internet Service Providers For Corporate,internet service providers for home,ftth internet service provider,internet leased line service,leased line providers in thane">
+   <meta name="google" content="notranslate"/>
+    <link rel="shortcut icon" href="./assets/img/Threesa_Logo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+<link href="https://file.myfontastic.com/JpmxZCFcddDr2e5EYRHXJ8/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/preload.min.css">
+    <link rel="stylesheet" href="assets/css/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/style.red-500.min.css">
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled="">
+    <script src="angulerjs/angular.min.js"></script>
+    <script src="angulerjs/angular-sanitize.min.js"></script>
+    <script src="angulerjs/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+    <script src="angulerjs/appEntity.js"></script>
+  </head>
+
+  <body  ng-app="appEntity" ng-controller="entityController">
+    <!-- <a href="javascript:void(0)" class="ms-conf-btn ms-configurator-btn btn-circle btn-circle-raised btn-circle-primary animated rubberBand">
+      <i class="fa fa-gears"></i>
+    </a> -->
+    <div id="ms-preload" class="ms-preload">
+      <div id="status">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="ms-site-container">
+      <!-- Modal -->
+      <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+          <div class="modal-content">
+            <div class="modal-header d-block shadow-2dp no-pb">
+              <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="zmdi zmdi-close"></i>
+                </span>
+              </button>
+              <div class="modal-title text-center">
+                 <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+                <h3 class="no-m ms-site-title"><strong>Threesa Infoway</strong></h3>
+              </div>
+              <div class="modal-header-tabs">
+                <ul class="nav nav-tabs nav-tabs-full nav-tabs-2 nav-tabs-primary" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="nav-link active withoutripple">
+                      <i class="zmdi zmdi-account"></i>Enquiry</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="nav-link withoutripple">
+                      <i class="zmdi zmdi-dns"></i>Complaint</a>
+                  </li>
+               
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+                  <form autocomplete="off">
+                    <fieldset>
+                     <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user-r"><span style="color:black">Name</span></label>
+                          <input type="text" style="color:black"  id="ms-form-user-r" ng-model="customer.customername" class="form-control" autofocus /> </div>
+                      </div>
+					  <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-phone"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-r"><span style="color:black">Mobile No.</span></label>
+                          <input type="number" ng-model="customer.mobile1"  id="ms-form-pass-r" class="form-control" autofocus> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email-r"><span style="color:black">Email ID</span></label>
+                          <input type="email"   ng-model="customer.email" id="ms-form-email-r" class="form-control" autofocus> </div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-dot-circle"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Address</span></label>
+                          <input type="text" ng-model="customer.address" id="ms-form-pass-rn" class="form-control" autofocus> </div>
+                      </div>
+					    <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-comment-outline"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Message</span></label>
+                          <input type="text" g-model="customer.remark" id="ms-form-pass-rn" class="form-control"> </div>
+                      </div>
+					 <center> <a href="javascript:void(0)" ng-click="AddNewEnquiry()" class="wave-effect-light btn btn-raised btn-google">
+                     Submit</a></center>
+                    </fieldset>
+                  </form>
+                 
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+                  <form>
+                    <fieldset>
+					    <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user-r"><span style="color:black">Register Username</span></label>
+                          <input type="text" style="color:black"  ng-model="complaint.customer"   id="ms-form-user-r" class="form-control" autofocus /> </div>
+                      </div>
+					  <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-phone"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-r"><span style="color:black">Mobile No.</span></label>
+                          <input type="number" ng-model="complaint.mobile1"  id="ms-form-pass-r" class="form-control" autofocus> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email-r"><span style="color:black">Address</span></label>
+                          <input type="email" id="ms-form-email-r" ng-model="complaint.address"  class="form-control" autofocus> </div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-wifi-off"></i>
+                          </span>
+							<label class="control-label" for="ms-form-pass-rn"><span style="color:black">Isuue</span></label>      
+							<select ng-model="complaint.issue" class="form-control md-1" required>
+												<option value="" selected disabled></option>
+												<option value="651 Error occur">651 Error occur</option>
+												<option value="691 Error occur">691 Error occur</option>
+												<option value="shifting">shifting</option>
+												<option value="Internet is not working due to some reason">internet is not working due to some reason</option>
+												<option value="Router reset">Router reset</option>
+												<option value="Wire problem">Wire problem</option>
+												<option value="Other">Other problem</option>
+							</select>
+ </div>
+                      </div>
+					    <div class="form-group label-floating" ng-if="complaint.issue == 'Other'">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-comment-outline"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Other Issue</span></label>
+                          <input type="text" ng-model="complaint.otherissue" id="ms-form-pass-rn" class="form-control"  /> </div>
+                      </div>
+					 <center> <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-google" ng-click="AddNewComplaints()">
+                     Submit</a></center>
+                 </fieldset>
+                  </form>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+                  <fieldset>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-account"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-user-re">Username</label>
+                        <input type="text" id="ms-form-user-re" class="form-control"> </div>
+                    </div>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-email"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-email-re">Email</label>
+                        <input type="email" id="ms-form-email-re" class="form-control"> </div>
+                    </div>
+                    <button class="btn btn-raised btn-block btn-primary">Send Password</button>
+                  </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="ms-header ms-header-white">
+        <!--ms-header-primary-->
+        <div class="container container-full">
+          <div class="ms-title">
+            <!--   <img  src="/assets/img/threesa_logo_white.png"> </img>
+              <h1 style="margin-right:10px;" class="animated fadeInRight animation-delay-6">
+                <span> Threesa </span>&nbsp;Infoway &nbsp;<font size="3px">Pvt.&nbsp;Ltd.</font>
+              </h1> -->
+			  
+			  
+			   <a class="navbar-brand" href="index.html">
+			   <img  src="/assets/img/threesa_logo_white.png"> </img>
+              <h1 style="margin-right:10px;" class="animated fadeInRight animation-delay-6">
+                <span> Threesa &nbsp; Infoway &nbsp; Pvt. &nbsp; Ltd.</span>
+              </h1> 
+            </a>
+           
+          </div>
+
+        </div>
+      </header>
+      <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
+        <div class="container container-full">
+          <div class="navbar-header">
+             <a class="navbar-brand" href="index.html">
+             <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+              <span class="ms-title">
+                <strong>Threesa &nbsp; Infoway &nbsp; Pvt. &nbsp; Ltd. </strong> 
+              </span>
+            </a>
+			  <a href="javascript:void(0)" class="ms-toggle-left btn-navbar-menu hidden-lg hidden-md">
+            <i class="zmdi zmdi-menu"></i>
+          </a>
+          </div>
+         
+		 
+		 <div class="collapse navbar-collapse" id="ms-navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown active">
+                <a href="#home" class="nav-link dropdown-toggle animated fadeIn animation-delay-7"  role="button" aria-haspopup="true" aria-expanded="false" data-name="home">Home
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#plans" class="nav-link dropdown-toggle animated fadeIn animation-delay-7" role="button" aria-haspopup="true" aria-expanded="false" data-name="page">Plan
+                
+                </a>
+               
+              </li>
+              <li class="nav-item dropdown dropdown-megamenu-container">
+                <a href="#about" class="nav-link dropdown-toggle animated fadeIn animation-delay-7"  role="button" aria-haspopup="true" aria-expanded="false" data-name="component">About
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#service" class="nav-link dropdown-toggle animated fadeIn animation-delay-7"  role="button" aria-haspopup="true" aria-expanded="false" data-name="blog">Service
+                 
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#partner" class="nav-link dropdown-toggle animated fadeIn animation-delay-8"  role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Partners
+                </a>
+
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#contact" class="nav-link dropdown-toggle animated fadeIn animation-delay-9"  role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Contact
+                </a>
+                
+              </li>
+			  <li class="nav-item dropdown">
+                <a href="#contact" class="nav-link dropdown-toggle animated fadeIn animation-delay-9" data-toggle="modal" data-target="#ms-account-modal" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Complaint/Enquiry
+                </a>
+                
+              </li>
+            </ul>
+          </div>
+         
+        
+     
+            
+        </div>
+        <!-- container -->
+      </nav>
+      <div class="ms-hero ms-hero-material active" id="home">
+        <span class="ms-hero-bg"></span>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-7">
+              <div id="carousel-hero" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <div class="carousel-caption">
+                      <div class="ms-hero-material-text-container">
+                        <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
+                          <h1 class="animated fadeInLeft animation-delay-15 font-smoothing">We provides
+                              <strong>high speed Internet service</strong> for Home and Office use.</h1>
+                          <h2 class="animated fadeInLeft animation-delay-18">With unlimited  
+                            <span class="color-warning">internet plans</span> and monthly offers.</h2>
+                        </header>
+                        <ul class="ms-hero-material-list">
+                         <h1 class="animated fadeInLeft animation-delay-15">Internet is
+                            <strong>Solution</strong> for You...</h1>
+                          <h2 class="animated fadeInLeft animation-delay-18">when your internet is 
+                            <span class="color-warning"><strong><b>Threesa Infoway</b></strong></span> </h2>
+                        </ul>
+                       
+                      </div>
+                      <!-- ms-hero-material-text-container -->
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <div class="ms-hero-material-text-container">
+                        <header class="ms-hero-material-title animated slideInLeft animation-delay-5">   
+
+                          <h1 class="animated fadeInLeft animation-delay-15">Enjoy high speed
+                            <strong>unlimited</strong> Internet</h1>
+                          <h2 class="animated fadeInLeft animation-delay-18">at unbeatable price 
+                            <span class="color-warning">and exciting offers</span> </h2>
+                        </header>
+                         <ul class="ms-hero-material-list">
+                         <h1 class="animated fadeInLeft animation-delay-15">Introducing Diamond 10.0</br>
+                            <strong style="font-size:70px;"><i>100&nbsp;<sub style="font-size:40px;">MBPS</sub></i></strong></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>&#8377;</sup><strong>1200*</strong></h1>
+                         
+                        </ul>
+                      </div>
+                      <!-- ms-hero-material-text-container -->
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <div class="ms-hero-material-text-container">
+                        <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
+                          <h1 class="animated fadeInLeft animation-delay-15">Buy For 6 Months
+                            <strong></strong>.</h1>
+                          <h2 class="animated fadeInLeft animation-delay-18">Get 6 Months
+                            <span class="color-warning">Free</span>.</h2>
+                        </header>
+						   <ul class="ms-hero-material-list">
+                         <h1 class="animated fadeInLeft animation-delay-15">For any <strong>Complaints </strong>or<strong> Payments</strong> use our <strong>Mobile Application </strong></br>
+                            <strong style="font-size:40px;cursor:pointer;" class="color-warning" onclick="location.href='https://play.google.com/store/apps/details?id=in.spacecom.log2space.client.threesa'">Threesa Infoway Pvt Ltd</strong></h1>
+                         
+                        </ul>
+                      </div>
+                      <!-- ms-hero-material-text-container -->
+                    </div>
+                  </div>
+                  <div class="carousel-controls" style="margin-bottom:-50px;">
+				    <ol class="carousel-indicators">
+                      <li data-target="#carousel-hero" data-slide-to="0" class="animated fadeInUpBig animation-delay-27 active"></li>
+                      <li data-target="#carousel-hero" data-slide-to="1" class="animated fadeInUpBig animation-delay-28"></li>
+                      <li data-target="#carousel-hero" data-slide-to="2" class="animated fadeInUpBig animation-delay-29"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-5">
+              <div class="ms-hero-img animated zoomInUp animation-delay-30">
+                <img src="assets/img/demo/mock-imac-material2.png" alt="" class="img-fluid">
+                <div id="carousel-hero-img" class="carousel carousel-fade slide" data-ride="carousel" data-interval="3000">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators carousel-indicators-hero-img">
+                    <li data-target="#carousel-hero-img" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-hero-img" data-slide-to="1"></li>
+                    <li data-target="#carousel-hero-img" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="ms-hero-img-slider carousel-item active">
+                      <img src="assets/img/demo/speedtest.png" alt="" class="img-fluid"> </div>
+                    <div class="ms-hero-img-slider carousel-item">
+                      <img src="assets/img/demo/isp.png" alt="" class="img-fluid"> </div>
+                    <div class="ms-hero-img-slider carousel-item">
+                      <img src="assets/img/demo/network.png" alt="" class="img-fluid"> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- container -->
+      </div>
+	  <!-- container -->
+	        <div class="container mt-6" id="plans">
+        <div class="text-center mb-4">
+          <h2 class="uppercase color-primary">See our subscription plans</h2>
+          <p class="lead uppercase">Surprise with our unique features</p>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-3">
+            <div class="price-table price-table-info wow zoomInUp animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">ROCKET</span>
+                <h3>
+                  <sup><i class="fa fa-inr"></i></sup>3000.00
+                  <sub>/yr.</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i style="font-size:20px;" class="fa fa-tachometer"></i><span style="font-size:20px;">Speed 10 Mbps</span></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  500.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2000.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  3000.00/-</b></li>
+				  <li>
+                    <i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.</li>
+                </ul>
+                <div class="text-center">
+                  <a href="javascript:void(0)" class="btn btn-info btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Suscribe Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="price-table price-table-success prominent wow zoomInDown animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">ROCKET 2.0</span>
+                <h3>
+                  <sup><i class="fa fa-inr"></i></sup>4200.00
+                  <sub>/yr.</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                 <li>
+                    <i style="font-size:20px;" class="fa fa-tachometer"></i><span style="font-size:20px;">Speed 20 Mbps</span></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  700.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2800.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  4200.00/-</b></li>
+				  <li>
+                    <i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.</li>
+                </ul>
+                <div class="text-center">
+                  <a href="javascript:void(0)" class="btn btn-success btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Suscribe Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="price-table price-table-warning wow zoomInUp animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">AGNI 4.0</span>
+                <h3>
+                  <sup><i class="fa fa-inr"></i></sup>4800.00
+                  <sub>/yr.</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                  <li>
+                    <i style="font-size:20px;" class="fa fa-tachometer"></i><span style="font-size:20px;">Speed 40 Mbps</span></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  800.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  3200.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  4800.00/-</b></li>
+				  <li>
+                    <i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.</li>
+                </ul>
+                <div class="text-center">
+                  <a href="javascript:void(0)" class="btn btn-warning btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Suscribe Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+		   <div class="col-lg-3">
+            <div class="price-table price-table-royal prominent wow zoomInDown animation-delay-2">
+              <header class="price-table-header">
+                <span class="price-table-category">AGNI 7.0</span>
+                <h3>
+                  <sup><i class="fa fa-inr"></i></sup>7200.00
+                  <sub>/yr.</sub>
+                </h3>
+              </header>
+              <div class="price-table-body">
+                <ul class="price-table-list">
+                 <li>
+                    <i style="font-size:20px;" class="fa fa-tachometer"></i><span style="font-size:20px;">Speed 70 Mbps</span></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  1200.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  4800.00/-</b></li>
+                  <li>
+                    <i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  7200.00/-</b></li>
+				  <li>
+                    <i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.</li>
+                </ul>
+                <div class="text-center">
+                  <a href="javascript:void(0)" class="btn btn-royal btn-raised">
+                    <i class="zmdi zmdi-cloud-download"></i> Suscribe Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <!-- container -->
+	        <div class="wrap wrap-mountain mt-6" id="about">
+        <div class="container">
+          <h2 class="text-center text-light mb-6 wow fadeInDown animation-delay-5">
+            <strong>ABOUT US</strong> </h2>
+          <div class="row">
+       
+            <div class="col-lg-3 col-xs-3 col-sm-3 order-lg-1 pr-3">
+			<div class="statistic-box__container statistic-box--stl-style2 statistic-box--dark">
+							<div class="statistic-box">
+								<div class="statistic-box__icon-holder">
+									<span class="statistic-box__icon icon-process3"></span>
+								</div>
+								<div class="statistic-box__line">
+								</div>
+								<div class="statistic-box__details">
+									<img src="/assets/img/wifi.png"  style="height:50px;">
+									<h4 class="statistic-box__title">40,000+</h4>
+									<div class="statistic-box__content">
+										WIRELESS USERS
+									</div>
+								</div>
+							</div></br></br>
+							<div class="statistic-box">
+								<div class="statistic-box__icon-holder">
+									<span class="statistic-box__icon icon-gi-ico-6"></span>
+								</div>
+								<div class="statistic-box__line">
+								</div>
+								<div class="statistic-box__details">
+								<img src="/assets/img/company.png"  style="height:50px;">
+									<h4 class="statistic-box__title">1,000+</h4>
+									<div class="statistic-box__content">
+										COMMERCIAL USERS
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+			</div>
+           <div class="col-lg-3 col-xs-3 col-sm-3 order-lg-1 pr-3">
+			<div class="statistic-box__container statistic-box--stl-style2 statistic-box--dark">
+							<div class="statistic-box">
+								<div class="statistic-box__icon-holder">
+									
+								</div>
+								<div class="statistic-box__line">
+								</div>
+								<div class="statistic-box__details">
+								<img src="/assets/img/wireless-router.png"  style="height:50px;">
+									<h4 class="statistic-box__title">25,000+</h4>
+									<div class="statistic-box__content">
+										BROADBAND USERS
+									</div>
+								</div>
+								
+								
+							</div></br></br>
+							<div class="statistic-box">
+								<div class="statistic-box__icon-holder">
+									<span class="statistic-box__icon icon-noun_167805"></span>
+								</div>
+								<div class="statistic-box__line">
+								</div>
+								<div class="statistic-box__details">
+								<img src="/assets/img/networking.png"  style="height:50px;">
+									<h4 class="statistic-box__title">66,000+</h4>
+									<div class="statistic-box__content">
+										TOTAL USERS
+									</div>
+								</div>
+							</div>
+							</div>
+							</div>
+							
+            <div class="col-lg-6 col-xs-12 col-sm-12 order-lg-1 pr-6">
+              <p class="wow fadeInLeft animation-delay-6">We are delivers the IT Solutions and technical resources needed by small and medium sized Businesses, Government agencies , and the Educational Community To expand their networks. </p>
+              <p class="wow fadeInLeft animation-delay-7">We provide connectivity to remote and branch offices, and within departmental and campus environments And we enable telecommuters and the remote mobile workforce to stay securely connected to main office.</p>
+              <p class="wow fadeInLeft animation-delay-8">Our Solutions also provide them with the means to Protect their data, communications, and network integrity .We center on value rich solutions priced to appeal to any budget –minded buyer looking for a cost effective solution that can also offer wide compatibility across operating systems, related products and network protocols.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ms-hero ms-hero-black -->
+      <div class="container mt-4" id="service">
+        <h2 class="text-center color-primary mb-2 wow fadeInDown animation-delay-4">RESIDENTIAL AND COMMERCIAL BROADBAND SERVICE FEATURES</h2>
+        <p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4"> We are supplies comprehensive baseline and advance coverage to those who purchase our IT solutions. 
+          <span class="color-primary">We offer 24x7 technical supports on all our solutions.</span> Customer satisfaction is how services are offered at their end and we are more concerned to provide the best services to the customer for their satisfaction.</p>
+        <div class="row">
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-4">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg color-info">
+                <i class="zmdi zmdi-cloud-outline"></i>
+              </span>
+              <h4 class="color-info">Fatest Internet Service</h4>
+              <ul class="text-left" style="list-style: none;"><li>Fastest internet service provider</li><li>Speed upto 100 Mbps</li><li>For Residential Users </li><li>For Commercial Users</li></ul>
+              <!-- <a href="javascript:void(0)" class="btn btn-info btn-raised">Action here</a> -->
+            </div>
+          </div>
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-8">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg color-warning">
+                <i class="zmdi zmdi-router"></i>
+              </span>
+              <h4 class="color-warning">Quick Installation Connection</h4>
+              <p class=""><ul class="text-left" style="list-style: none;">  <li>Ensure quicker installation</li>
+								<li>New connections at any given location</li>
+                               </ul></p>
+             
+            </div>
+          </div>
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-10">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg color-success">
+                <i class="zmdi zmdi-settings"></i>
+              </span>
+              <h4 class="color-success">24X7 Technical Support</h4>
+              <p class=""><ul class="text-left" style="list-style: none;"><li>Dedicated technical team</li>
+								<li>Back support team</li>
+								<li>24x7 to resolve customer queries</li></ul></p>
+              
+            </div>
+          </div>
+          <div class="ms-feature col-xl-3 col-lg-6 col-md-6 card wow flipInX animation-delay-6">
+            <div class="text-center card-body">
+              <span class="ms-icon ms-icon-circle ms-icon-xxlg  color-danger">
+                <i class="zmdi zmdi-star-circle"></i>
+              </span>
+              <h4 class="color-danger">DOT Certified ISP and ISP1</h4>
+              <p class="">  <ul class="text-left" style="list-style: none;"><li>We are DOT Certiified ISP</li>
+								<li>SP1 internet service providers</li>
+								<li>Thane, Navi Mumbai & Mumbai Region</li></ul></p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="wrap wrap-danger mt-6" id="partner">
+        <h2 class="text-center no-m">OUR PEERING PARTNERS</h2>
+        <div id="carousel-example-generic" class="carousel carousel-cards carousel-fade slide" data-ride="carousel" data-interval="7000">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="carousel-caption">
+                <div class="container">
+				     <div class="row">
+                    <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        
+						<center>
+							<img src="assets/img/google.png" style="margin:50px;" >
+						</center>
+                      
+                      </div>
+                    </div>
+					<div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        
+						<center>
+							<img src="assets/img/akamai.png" style="margin:50px;" >
+						</center>
+                      
+                      </div>
+                    </div>
+					<div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        
+						<center>
+							<img src="assets/img/limelight.png" style="margin:50px;" >
+						</center>
+                      
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                     <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        
+						<center>
+							<img src="assets/img/microsoft.png" style="margin:50px;" >
+						</center>
+                      
+                      </div>
+                    </div>
+					 <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        
+						<center>
+							<img src="assets/img/facebook.png" style="margin:50px;" >
+						</center>
+                      
+                      </div>
+                    </div>
+					 <div class="col-lg-4">
+                      <div class="card animated flipInX animation-delay-2 mb-4">
+                        
+						<center>
+							<img src="assets/img/nixi.png" style="margin:50px;" >
+						</center>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control-prev btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="next">
+            <i class="zmdi zmdi-arrow-left"></i>
+          </a>
+          <a class="right carousel-control-next btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="next">
+            <i class="zmdi zmdi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+     
+      <aside class="ms-footbar">
+        <div class="container" id="contact">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 ms-footer-col">
+				 <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user-r"><span style="color:white">Name</span></label>
+                          <input type="text"  id="ms-form-user-r" class="form-control"  /> </div>
+                      </div>
+					  <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-phone"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-r"><span style="color:white">Mobile No.</span></label>
+                          <input type="number"  id="ms-form-pass-r" class="form-control" > </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email-r"><span style="color:white">Email ID</span></label>
+                          <input type="email" id="ms-form-email-r" class="form-control" > </div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-dot-circle"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:white">Subject</span></label>
+                          <input type="text" id="ms-form-pass-rn" class="form-control" > </div>
+                      </div>
+					    <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-comment-outline"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass-rn"><span style="color:white">Message/Address</span></label>
+                          <input type="text" id="ms-form-pass-rn" class="form-control"> </div>
+                      </div>
+                      <button class="btn btn-raised btn-block btn-primary">SEND</button>
+         
+            </div>
+           <div class="col-lg-7 col-md-7 ms-footer-col" style="background:red;">
+           <div class="row">
+		    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15069.474781095545!2d72.9638529!3d19.2227569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f5f3337bac16504!2sThreesa+Broadband!5e0!3m2!1sen!2sin!4v1520418241301"  frameborder="0" style="border:0;width:100rem;height:500px;" allowfullscreen></iframe>
+		   </div>
+		   </div>
+		   </div>
+		    <div class="row">
+            <div class="col-lg-12 col-md-12 ms-footer-col ">
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-title">
+                   <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+                  <h3 class="no-m ms-site-title">
+                    <span>Threesa Infoway </span> <font size="4px"> Pvt. Ltd.</font>
+                  </h3>
+                </div>
+                <address class="no-mb">
+                  <p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Shop No.4, 1st Floor, Anand Laghu Sankul, Near Siddhachal Phase 4, Vasant Vihar, Thane, Maharashtra, India-400610</p>
+                 
+                  <p>
+                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                    <a href="mailto:info@thresabroadband.com">info@thresabroadband.com</a> &nbsp; <i class="color-royal-light zmdi zmdi-phone mr-1"></i>022-45111333 &nbsp; <i class="color-success-light fa fa-fax mr-1"></i>9768635000 / 8652769000
+                  </p>
+                </address>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Social Media</h3>
+                <div class=" row ms-footbar-social">
+                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+                <!--   <a href="javascript:void(0)" class="btn-circle btn-youtube">
+                    <i class="zmdi zmdi-youtube-play"></i>
+                  </a> -->
+                  <br>
+                  <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a>
+                 <!--  <a href="javascript:void(0)" class="btn-circle btn-instagram">
+                    <i class="zmdi zmdi-instagram"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-github">
+                    <i class="zmdi zmdi-github"></i> -->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+		   
+        </div>
+      </aside>
+      <footer class="ms-footer">
+        <div class="container">
+          <p>Copyright &copy; Threesa Infoway Pvt. Ltd. 2018</p>
+        </div>
+      </footer>
+      <div class="btn-back-top">
+        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+          <i class="zmdi zmdi-long-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+<div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+      <div class="sb-slidebar-container">
+       <header class="ms-slidebar-header">
+          
+          <div class="">
+          
+            <div class="ms-slidebar-t">
+              <center>
+			   <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+			  </center>
+              <h3 class="col-sm-12 col-12">
+               <strong style="color:white">Threesa Infoway Pvt. Ltd.</strong>
+              </h3>
+            </div>
+          </div>
+        </header> 
+		
+        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+          <li>
+            <a class="link ms-toggle-left" href="#home">
+              <i class="zmdi zmdi-view-compact" ></i>Home</a>
+          </li>
+          <li>
+            <a class="link ms-toggle-left" href="#plans">
+              <i class="zmdi zmdi-link"></i>Plan</a>
+          </li>
+		  <li>
+            <a class="link ms-toggle-left" href="#about">
+              <i class="zmdi zmdi-link"></i>About</a>
+          </li>
+		  <li>
+            <a class="link ms-toggle-left" href="#service">
+              <i class="zmdi zmdi-link"></i>Service</a>
+          </li>
+		  <li>
+            <a class="link ms-toggle-left" href="#partner">
+              <i class="zmdi zmdi-link"></i>Partner</a>
+          </li>
+		  <li>
+            <a class="link ms-toggle-left" href="#contact">
+              <i class="zmdi zmdi-link"></i>Contact</a>
+          </li>
+		  <li>
+            <a class="link ms-toggle-left" data-toggle="modal" data-target="#ms-account-modal">
+              <i class="zmdi zmdi-link"></i>Complaint/Enquiry</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+   <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/configurator.min.js"></script>
+    <script>
+      (function(i, s, o, g, r, a, m)
+      {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function()
+        {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-90917746-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="assets/js/index.js"></script>
+    
+  </body>
+</html>
