@@ -59,9 +59,9 @@ routes.configure(app);
 
 const hostname = 'threesainfoway.net';
 
-const cert = fs.readFileSync('./sslforfree/certificate.crt');
-const ca = fs.readFileSync('./sslforfree/ca_bundle.crt');
-const key = fs.readFileSync('./sslforfree/private.key');
+ const cert = fs.readFileSync('../../etc/letsencrypt/live/threesainfoway.net/cert.pem');
+const ca = fs.readFileSync('../../etc/letsencrypt/live/threesainfoway.net/chain.pem');
+const key = fs.readFileSync('../../etc/letsencrypt/live/threesainfoway.net/privkey.pem');
 
 
 let httpsOptions = {
@@ -70,6 +70,8 @@ let httpsOptions = {
     key: key // fs.readFileSync('./ssl/example.key');
  };
 
+
+// let httpsOptions = {};
 
  const httpServer = http.createServer((req, res) => {
     res.statusCode = 301;

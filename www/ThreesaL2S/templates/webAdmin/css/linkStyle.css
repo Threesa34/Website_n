@@ -1,0 +1,388 @@
+/* CSS Document */
+a:link {
+	text-decoration : none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+/* Site link */
+.sideMenuLink {
+	font-size 		: 7pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: normal;
+}
+a.sideMenuLink:link   	{ text-decoration: none; color : #111111; }
+a.sideMenuLink:visited { text-decoration: none; color : #111111; }
+a.sideMenuLink:hover	{ text-decoration: none; color : #777777; }
+
+/* Site link */
+.lightgreyLink {
+	font-size 		: 7pt;
+	color 			: #666666;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: normal;
+}
+a.lightgreyLink:link   	{ text-decoration: none; color : #666666; }
+a.lightgreyLink:visited { text-decoration: none; color : #666666; }
+a.lightgreyLink:hover	{ text-decoration: none; color : #777777; }
+
+.lightgreyLinkbig {
+	font-size 		: 8pt;
+	color 			: #666666;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+}
+a.lightgreyLinkbig:link   	{ text-decoration: none; color : #666666; }
+a.lightgreyLinkbig:visited { text-decoration: none; color : #666666; }
+a.lightgreyLinkbig:hover	{ text-decoration: none; color : #000000; }
+
+.bluegrey {
+	font-size 		: 8pt;
+	color 			: #666666;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+}
+a.bluegrey:link   	{ text-decoration: none; color : #666666; }
+a.bluegrey:visited { text-decoration: none; color : #666666; }
+a.bluegrey:hover	{ text-decoration: none; color : #000000; }
+
+.whiteLink_home {
+	font-size 		: 8pt;
+	color 			: #FFFFFF;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+	
+}
+a.whiteLink_home:link   		{ text-decoration: none; color : #FFFFFF; }
+a.whiteLink_home:visited 	{ text-decoration: none; color : #FFFFFF; }
+a.whiteLink_home:hover		{ text-decoration: none; color : #FFFFFF; }
+
+.whiteLink {
+	font-size 		: 8pt;
+	color 			: #000000;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+	
+}
+a.whiteLink:link   		{ text-decoration: none; color : #000000; }
+a.whiteLink:visited 	{ text-decoration: none; color : #000000; }
+a.whiteLink:hover		{ text-decoration: none; color : #FFFFFF; }
+
+/* Site link */
+.blueLink {
+	font-size 		: 8pt;
+	color 			: #0000FF;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: normal;
+}
+a.blueLink:link   	{ text-decoration: none; color : #0000FF; }
+a.blueLink:visited { text-decoration: none; color : #0000FF; }
+a.blueLink:hover	{ text-decoration: none; color : #0000FF; }
+
+/* Menu link */
+.menuLinkHome {
+	font-size 		: 8pt;
+	color 			: #444444;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+	background-repeat: no-repeat;
+}
+a.menuLinkHome:link   	{ text-decoration: none; color : #444444; }
+a.menuLinkHome:visited 	{ text-decoration: none; color : #444444; }
+a.menuLinkHome:hover	{ text-decoration: none; color : #000000; }
+
+.menuLink {
+	font-size 		: 7pt;
+	color 			: #444444;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+	background-repeat: no-repeat;
+}
+a.menuLink:link   	{ text-decoration: none; color : #444444; }
+a.menuLink:visited 	{ text-decoration: none; color : #444444; }
+a.menuLink:hover	{ text-decoration: none; color : #000000; }
+
+/* Site link */
+.subMenuLink {
+	font-size 		: 8pt;
+	color 			: #222222;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: normal;
+	margin-top		: 3px;
+	margin-bottom	: 3px;
+}
+a.subMenuLink:link   	{ text-decoration: none; color : #222222; }
+a.subMenuLink:visited 	{ text-decoration: none; color : #222222; }
+a.subMenuLink:hover		{ text-decoration: underline; color : #000000; }
+
+/* Detail's Title Text link */
+.titleLink {
+	font-size 		: 8pt;
+	color 			: #000099;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+}
+a.titleLink:link   	{ text-decoration: none; color : #000099; }
+a.titleLink:visited { text-decoration: none; color : #000099; }
+a.titleLink:hover	{ text-decoration: none; color : #0033CC; }
+
+/* for dates in event calender */
+.monthLink {
+	font-size 		: 7pt;
+	color 			: #FFFFFF;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: 600;
+	text-align		: center;
+}
+a.monthLink:link   	{ text-decoration: none; color : #FFFFFF; }
+a.monthLink:visited { text-decoration: none; color : #FFFFFF; }
+a.monthLink:hover	{ text-decoration: none; color : #FFFFFF; }
+
+/* for dates in event calender */
+.dateLink {
+	font-size 		: 8pt;
+	color 			: #010369;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: normal;
+	text-align		: center;
+}
+a.dateLink:link   	{ text-decoration: none; color : #2B2B9F; }
+a.dateLink:visited 	{ text-decoration: none; color : #2B2B9F; }
+a.dateLink:hover	{ text-decoration: none; color : #FFFFFF; background-color: #2B458F;}
+
+.eventdateLink {
+	font-size 		: 8pt;
+	color 			: #010369;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: normal;
+	text-align		: center;
+	border			: 1px solid #2B2B9F;
+}
+a.eventdateLink:link   	{ text-decoration: none; color : #2B2B9F; }
+a.eventdateLink:visited { text-decoration: none; color : #2B2B9F; }
+a.eventdateLink:hover	{ text-decoration: none; color : #FFFFFF; background-color: #2B458F;}
+
+/* for current date in event calender */
+.currdateLink {
+	font-size 		: 8pt;
+	color 			: #FF0000;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+	text-align		: center;
+}
+a.currdateLink:link   	{ text-decoration: none; color : #FF0000; }
+a.currdateLink:visited 	{ text-decoration: none; color : #FF0000; }
+a.currdateLink:hover	{ text-decoration: none; color : #FFFFFF; background-color: #2B458F;}
+
+/* Action link */
+.actionLink {
+	font-size 		: 8pt;
+	color 			: #010369;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: normal;
+	text-align		: center;
+}
+a.actionLink:link   	{ text-decoration: none; color : #2B2B9F; }
+a.actionLink:visited 	{ text-decoration: none; color : #2B2B9F; }
+a.actionLink:hover		{ text-decoration: none; color : #FFFFFF; background-color: #2B458F;}
+
+/* Page link */
+.pageLink {
+	font-size 		: 8pt;
+	color 			: #010369;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+}
+a.pageLink:link   	{ text-decoration: none; color : #010369; }
+a.pageLink:visited 	{ text-decoration: none; color : #010369; }
+a.pageLink:hover	{ text-decoration: underline; color : #010369; }
+
+/* Help Link */
+.helpLink {
+	font-size 		: 8pt;
+	color 			: #010369;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+}
+a.helpLink:link   	{ text-decoration: none; color : #010369; }
+a.helpLink:visited 	{ text-decoration: none; color : #010369; }
+a.helpLink:hover	{ text-decoration: underline; color : #010369; }
+
+
+/* Other link displayed on page */
+.otherLink {
+	font-size 		: 8pt;
+	color 			: #000099;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-weight		: bold;
+	
+}
+a.otherLink:link   		{ text-decoration: none; color : #000099; }
+a.otherLink:visited 	{ text-decoration: none; color : #000099; }
+a.otherLink:hover		{ text-decoration: underline; color : #000099; }
+
+/* Copyright and bottom info */
+.copyright			{
+	font-size		: 7pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #999999;
+	font-weight		: bold;
+}
+a.copyright			{ text-decoration: none; 	color: #999999; }
+a.copyright:link   	{ text-decoration: none; 	color: #999999; }
+a.copyright:visited { text-decoration: none; 	color: #999999; }
+a.copyright:hover 	{ text-decoration: none;	color: #555555; }
+
+.extraBold			{
+	font-size		: 7pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #FF972F;
+	font-weight		: bold;
+}
+a.extraBold			{ text-decoration: none; 	color: #FF972F; }
+a.extraBold:link   	{ text-decoration: none; 	color: #FF972F; }
+a.extraBold:visited { text-decoration: none; 	color: #FF972F; }
+a.extraBold:hover 	{ text-decoration: none;	color: #555555; }
+
+.cssGlobalDetour_BuleBold {
+		font-family : Verdana, Arial, Helvetica, sans-serif;
+	  	font-size : 10px;
+		color: #010369;
+		font-weight:600;
+		line-height:10px;
+	}	
+
+a.cssGlobalDetour_BuleBold			{ text-decoration: none; 	color: #010369; }
+a.cssGlobalDetour_BuleBold:link   	{ text-decoration: none; 	color: #010369; }
+a.cssGlobalDetour_BuleBold:visited { text-decoration: none; 	color: #010369; }
+a.cssGlobalDetour_BuleBold:hover 	{ text-decoration: none;	color: #555555; }
+
+.blueBold			{
+	font-size		: 8pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #010369;
+	font-weight		: bold;
+}
+a.blueBold			{ text-decoration: none; 	color: #010369; }
+a.blueBold:link   	{ text-decoration: none; 	color: #010369; }
+a.blueBold:visited { text-decoration: none; 	color: #010369; }
+a.blueBold:hover 	{ text-decoration: none;	color: #555555; }
+
+.whiteBold {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9px; 
+	font-weight: bold; 
+	color: #FFFFFF;
+	text-align:center
+}
+
+a.whiteBold			{ text-decoration: none; 	color: #FFFFFF; }
+a.whiteBold:link   	{ text-decoration: none; 	color: #FFFFFF; }
+a.whiteBold:visited { text-decoration: none; 	color: #FFFFFF; }
+a.whiteBold:hover 	{ text-decoration: none;	color: #999999; }
+
+.blueBoldUn		{
+	font-size		: 8pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #010369;
+	font-weight		: bold;
+}
+
+a.blueBoldUn			{ 	text-decoration: underline;color: #010369; }
+a.blueBoldUn:link   	{	text-decoration: underline;color: #7777FF; }
+a.blueBoldUn:visited 	{	text-decoration: underline;color: #7777FF; }
+a.blueBoldUn:hover   	{	text-decoration: underline;color: #555555; }
+
+.whiteBoldUn {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9px; 
+	font-weight: bold; 
+	color: #FFFFFF;
+	text-align:center
+}
+
+a.whiteBoldUn			{ text-decoration: underline; 	color: #FFFFFF; }
+a.whiteBoldUn:link   	{ text-decoration: underline; 	color: #FFFFFF; }
+a.whiteBoldUn:visited 	{ text-decoration: underline; 	color: #FFFFFF; }
+a.whiteBoldUn:hover 	{ text-decoration: underline;	color: #000000; }
+
+.extraBoldMaroon		{
+	font-size		: 7pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #AA1C1B;
+	font-weight		: bold;
+}
+a.extraBoldMaroon			{ text-decoration: none; 	color: #AA1C1B; }
+a.extraBoldMaroon:link   	{ text-decoration: none; 	color: #AA1C1B; }
+a.extraBoldMaroon:visited { text-decoration: none; 	color: #AA1C1B; }
+a.extraBoldMaroon:hover 	{ text-decoration: none;	color: #555555; }
+
+.extraBoldBlue		{
+	font-size		: 7pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #3333CC;
+	font-weight		: bold;
+}
+a.extraBoldBlue			{ text-decoration: none; 	color: #3333CC; }
+a.extraBoldBlue:link   	{ text-decoration: none; 	color: #3333CC; }
+a.extraBoldBlue:visited { text-decoration: none; 	color: #3333CC; }
+a.extraBoldBlue:hover 	{ text-decoration: none;	color: #FF0000; }
+
+.GoldBold		{
+	font-size		: 8pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #BD8C1A;
+	font-weight		: bold;
+}
+a.GoldBold			{ text-decoration: none; 	color: #BD8C1A; }
+a.GoldBold:link   	{ text-decoration: none; 	color: #BD8C1A; }
+a.GoldBold:visited 	{ text-decoration: none; 	color: #BD8C1A; }
+a.GoldBold:hover 	{ text-decoration: none;	color: #FF0000; }
+
+.blackBold		{
+	font-size		: 8pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #000000;
+	font-weight		: bold;
+}
+a.blackBold			{ text-decoration: none; 	color: #000000; }
+a.blackBold:link   	{ text-decoration: none; 	color: #000000; }
+a.blackBold:visited 	{ text-decoration: none; 	color: #000000; }
+a.blackBold:hover 	{ text-decoration: none;	color: #FF0000; }
+
+.ASD		{
+	font-size		: 8pt;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	color			: #8E362F;
+	font-weight		: bold;
+}
+a.ASD			{ text-decoration: none; 	color: #8E362F; }
+a.ASD:link   	{ text-decoration: none; 	color: #8E362F; }
+a.ASD:visited 	{ text-decoration: none; 	color:  }
+a.ASD:hover 	{ text-decoration: none;	color: #FF0000; }
+
+.orangeLink{
+		font-family : Verdana, Arial, Helvetica, sans-serif;
+	  	font-size : 10px;
+		color: #FFCF00;
+		font-weight:600;
+		line-height:10px;
+	}	
+
+a.orangeLink		{ text-decoration: none; 	color: #FFCF00; }
+a.orangeLink:link   { text-decoration: none; 	color: #FFCF00; }
+a.orangeLink:visited { text-decoration: none; 	color: #FFCF00; }
+a.orangeLink:hover 	{ text-decoration: underline;	color: #FFCF00; }
+
+.adminManageLink {
+	font-size 		: 7pt;
+	color 			: #000000;
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	/*font-weight		: bold;*/
+}
+a.adminManageLink:link   	{ text-decoration: none; color : #000000; }
+a.adminManageLink:visited { text-decoration: none; color : #000000; }
+a.adminManageLink:hover	{ text-decoration: none; color : #666666; }

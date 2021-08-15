@@ -12,8 +12,80 @@ var smtpConfig = {
     }
 };
 
+
+const axios = require('axios');
+const request = require('request');
+var FormData = require('form-data');
+var fs = require('fs');
 function entity() {
   
+
+	this.loginToLog2Space = function(req, res)
+	{
+
+		console.log(req.body)
+		var data = new FormData();
+		data.append('username', req.body.username);
+		data.append('password', req.body.password);
+		data.append('user_type', 'user');
+		data.append('request_source', 'portal');
+		data.append('request_app', 'selfcare');
+		
+		var config = {
+		  method: 'post',
+		  url: 'http://103.252.4.46/l2s/api/selfcareL2sUserLogin',
+		  headers: { 
+			...data.getHeaders()
+		  },
+		  data : data
+		};
+		
+		axios(config)
+		.then(function (response) {
+		  res.send(response.data);
+		})
+		.catch(function (error) {
+		  console.log(error);
+		  res.send(error)
+		});
+		 /* var options = {
+			'method': 'POST',
+			'url': 'http://103.252.4.46:84/l2s/api/selfcareL2sUserLogin',
+			'formData': req.body
+			};		  request(options, function (error, response) {
+			
+			if (error) {
+				console.log(error);
+				res.send(error)
+			   }
+			   else
+			   {
+			   res.send(response.body)
+			   }
+		  }); */
+		 
+		
+
+		/* var data = {
+			txtLoginPass: req.body.txtLoginPass,
+			txtLogin: req.body.txtLogin,
+			Submit:'Login'
+
+		}
+		
+		
+		axios.post('https://login.threesainfoway.net/cgi/login.php', JSON.stringify(data))
+			.then((response) => {
+				console.log(`Status: ${response.status}`);
+				console.log('Body: ', response.data);
+				res.send({data: response.data})
+			}).catch((err) => {
+				console.error(err);
+				res.send(err)
+			}); */
+	}
+
+
   this.ListCustomersOnZone = function (zoneid, res) {
         connection.acquire(function (err, con) {
             con.query('SELECT * ,(select areaname from areamaster where areamaster.id = customers.area) as area FROM `customers` WHERE customers.area = '+zoneid+' order by id DESC', function (err, result) {

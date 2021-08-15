@@ -49,33 +49,33 @@ $scope.urlParameters = getUrlVars();
 
     $scope.internetPlans = [{
         heading: "ROCKET",
-        offer_amount: 3000,
+        offer_amount: 3100,
         period: "/yr.",
-        speed: "Speed 10 Mbps",
+        speed: "Speed 25 Mbps",
         table_class: "info",
         details: [
-            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  500.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2000.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  3000.00/-</b>',
+            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  400.00/-</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2200.00/-</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  3100.00/-</b>',
             '<i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.'
         ]
     }, {
         heading: "ROCKET 2.0",
-        offer_amount: 4200,
+        offer_amount: 3720,
         period: "/yr.",
-        speed: "Speed 20 Mbps",
+        speed: "Speed 50 Mbps",
         table_class: "success",
         details: [
-            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  700.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2800.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  4200.00/-</b>',
+            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  620.00/-</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2480.00/-</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  3720.00/-</b>',
             '<i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.'
         ]
     }, {
         heading: "AGNI 4.0",
         offer_amount: 4800,
         period: "/yr.",
-        speed: "Speed 40 Mbps",
+        speed: "Speed 100 Mbps",
         table_class: "warning",
         details: [
             ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  800.00/-</b>',
@@ -85,18 +85,101 @@ $scope.urlParameters = getUrlVars();
         ]
     }, {
         heading: "AGNI 7.0",
-        offer_amount: 7200,
+        offer_amount: 6960,
         period: "/yr.",
-        speed: "Speed 70 Mbps",
+        speed: "Speed 200 Mbps",
         table_class: "royal",
         details: [
-            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  1200.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  4800.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  7200.00/-</b>',
+            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  1160.00/-</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  4640.00/-</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  6960.00/-</b>',
             '<i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.'
         ]
     }];
 
+
+    $scope.inputType = 'password';
+
+    $scope.togglepasswordField = function()
+    {
+        if($scope.inputType == 'password')
+        {
+            $scope.inputType = 'text';
+        }
+        else
+        $scope.inputType = 'password';
+    }
+
+    $scope.callLoginApi = function() {
+		//const username = document.getElementById('uname').value;
+		//const password = document.getElementById('psw').value;
+		var data = {
+	      username: $scope.customerLogin.txtLogin.toLowerCase().trim(),
+	      password: $scope.customerLogin.txtLoginPass,
+	      user_type: 'user',
+	      request_source: 'portal',
+	      request_app: 'selfcare'
+	    };
+	    var options = {
+	      method: 'POST',
+	      body: toFormData(data),
+	      timeout:6000,
+	    };
+	    const url = `https://103.252.4.46/l2s/`;
+		fetch(`${url}api/selfcareL2sUserLogin`, options).then((res) => {
+	      return res.json().then((res) => {
+	        setTimeout(() => null, 0);
+	        if (res.status != 'ok' && res.code != 200) {
+	          throw new Error('Invalid username or password');
+	        } 
+	        else if(res.code==204)
+	        {return ('Content Not Found')}
+	        else {
+	        	return window.location = `http://localhost:8080/login?token=${res.data.token}&user_id=${res.data.username}`
+	        }
+	     });
+	    })
+	    return false;
+    }
+    
+
+	function toFormData({ ...data }) {
+	  var formData = new FormData();
+	  for (name in data)
+	    formData.append(name, data[name]);
+	  return formData;
+	}
+
+    $scope.CloseModal = function()
+    {
+        $('#ms-customer-login-modal').modal('hide');
+    }
+    $scope.LoginToLogTo = function()
+    {
+        if(($scope.customerLogin.txtLoginPass != undefined && $scope.customerLogin.txtLoginPass != '' && $scope.customerLogin.txtLoginPass != null) && ($scope.customerLogin.txtLogin != undefined && $scope.customerLogin.txtLogin != '' && $scope.customerLogin.txtLogin != null))
+        {
+        
+             $http({
+                method: 'POST',
+                url: '/api/loginToLog2Space',
+                data: {
+                    username: $scope.customerLogin.txtLogin.toLowerCase().trim(),
+                    password: $scope.customerLogin.txtLoginPass,
+                  }
+            })
+            .success(function (data) {
+                 if(data.status == 'ok')
+                {
+                    $scope.CloseModal();
+                     window.open('https://login.threesainfoway.net/selfcare/login?token='+data.data.token+'&user_id='+data.data.username);
+                }
+                else{
+                        alert(data.message);
+                }
+            }); 
+
+        }
+    }
 
     document.getElementById("home").focus();
 
@@ -121,6 +204,9 @@ $scope.urlParameters = getUrlVars();
             $('#ms-account-modal').modal('hide');
             });
     };
+
+    
+
 
     $scope.AddNewComplaints = function () {
         $scope.complaint.createdby = 'From Website';

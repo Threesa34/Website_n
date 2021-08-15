@@ -8,6 +8,12 @@ module.exports = {
 		
 		/* APP LOGIN */
 		
+		
+
+		app.post('/api/loginToLog2Space/', function (req, res) {
+            Entity.loginToLog2Space(req, res);
+		});
+		
         app.post('/api/user/auth/', function (req, res) {
             user.authuser(req.body, res);
         });

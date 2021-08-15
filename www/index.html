@@ -60,6 +60,77 @@
       </div>
     </div>
     <div class="ms-site-container">
+
+<!-- CUSTOER LOGIN MODAL -->
+
+<div class="modal modal-primary" id="ms-customer-login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog animated zoomIn animated-3x" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-block shadow-2dp no-pb">
+        <button type="button" class="close d-inline pull-right mt-2" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="zmdi zmdi-close"></i>
+          </span>
+        </button>
+        <div class="modal-title text-center">
+           <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
+          <h3 class="no-m ms-site-title"><strong>Threesa Infoway</strong></h3>
+        </div>
+
+        <div class="modal-header-tabs text-center">
+          <strong><h4>Customer Login</h4></strong>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade active show" id="ms-login-tab">
+
+            <!--  <object data="https://login.threesainfoway.net/cgi/login.php" style="width: 100%; height: 520px;overflow: auto;" type="text/html">
+              
+            </object -->
+
+            <form autocomplete="off"  name="frmLogin">
+           <!--  <form autocomplete="off"  name="frmLogin" target="_blank" action="https://login.threesainfoway.net/selfcare" method="post" ng-submit="CloseModal()"> -->
+              <fieldset>
+               <div class="form-group label-floating">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="zmdi zmdi-account"></i>
+                    </span>
+                    <label class="control-label" for="ms-form-user-r"><span style="color:black">Username</span></label>
+                    <input type="text" name="txtLogin" style="color:black"  id="ms-form-user-r" ng-model="customerLogin.txtLogin" class="form-control"  /> </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="zmdi zmdi-lock"></i>
+                    </span>
+                    <label class="control-label" for="ms-form-pass-r"><span style="color:black">Password</span></label>
+                    <input type="{{inputType}}" name="txtLoginPass" ng-model="customerLogin.txtLoginPass"  id="ms-form-pass-r" class="form-control" > </div>
+                </div>
+                <div class="form-group label-floating">
+                  <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" ng-click="togglepasswordField()">Show Password
+                      </label>
+                    </div>
+                </div>
+               <center> <button href="javascript:void(0)" name="Submit" class="wave-effect-light btn btn-raised btn-google" type="button"  ng-click="LoginToLogTo()" value="Login">
+               Login</button></center>
+              </fieldset>
+            </form>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTOMER LOGIN MODAL -->
+
+
+
       <!-- Modal -->
       <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog animated zoomIn animated-3x" role="document">
@@ -444,7 +515,7 @@
       </header>
       <nav class="navbar navbar-expand-md  navbar-static ms-navbar ms-navbar-primary">
         <div class="container container-full">
-          <div class="navbar-header">
+          <div class="navbar-header mr-4">
              <a class="navbar-brand" onclick="window.location.href = `http://threesainfoway.net`">
              <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
               <span class="ms-title">
@@ -617,7 +688,7 @@
 	        <div class="container mt-6" id="plans">
         <div class="text-center mb-4">
           <h2 class="uppercase color-primary">See our subscription plans</h2>
-          <p class="lead uppercase">Surprise with our unique features</p>
+          <!-- <p class="lead uppercase">Surprise with our unique features</p> -->
         </div>
         <div class="row no-gutters">
           <div class="col-lg-3" ng-repeat="data in internetPlans">
@@ -964,7 +1035,8 @@
                  
                   <p>
                     <i class="color-info-light zmdi zmdi-email mr-1"></i>
-                    <a href="mailto:info@threesainfoway.net">info@threesainfoway.net</a> &nbsp; <i class="color-royal-light zmdi zmdi-phone mr-1"></i>022-68383838 &nbsp; <i class="color-success-light fa fa-fax mr-1"></i>9768635000 / 8652769000
+                    <a href="mailto:info@threesainfoway.net">info@threesainfoway.net</a> &nbsp; <i class="color-royal-light zmdi zmdi-phone mr-1"></i>022-68383838 &nbsp; <i class="color-success-light fa fa-fax mr-1"></i>9768635000 / 8652769000&nbsp;
+                    <a href="https://api.whatsapp.com/send?phone=919152915234" title="click for enquiry on whatsapp"><i class="color-success-light zmdi zmdi-whatsapp mr-1"></i>9152915234</a>   &nbsp; <i class="color-royal-light zmdi zmdi-phone mr-1"></i> 7739012000 (FOR COMMERCIAL ENQUIRIES)
                   </p>
                 </address>
               </div>

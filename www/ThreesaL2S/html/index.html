@@ -1,0 +1,434 @@
+			<script language="JavaScript">
+				window.open("popupmsg.php?qrystring=QWN0aXZlJjAxIERlYywyMCAmZGVtbw==", "xy", "toolbar=no,status=no,menubar=no,scrollbars=no,resizable=no,location=no,width=450,height=200,left=300,top=250");
+			</script>
+		<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>::::::  :: Welcome to LoG2SpAcE Administration::::::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!--META HTTP-EQUIV=Refresh CONTENT="1100"-->
+<!--META NAME="log2space" CONTENT="log2space,Log2Space, LOG2SPACE, ISP Authentication Server, SMS"-->
+<LINK REL="SHORTCUT ICON" HREF="../templates/webAdmin/images/l2s.ico">
+<link href="../templates/webAdmin/css/style.css" rel="stylesheet" type="text/css">
+<link href="../templates/webAdmin/css/linkStyle.css" rel="stylesheet" type="text/css">
+<link href="../templates/webAdmin/css/inputStyle.css" rel="stylesheet" type="text/css">
+<link href="../templates/webAdmin/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../templates/webAdmin/js/validate.js"></script>
+<script language="javascript" src="../templates/webAdmin/js/functions.js"></script>
+<!-- script language="javascript" src="../templates/webAdmin/js/helpdesk.js"></script -->
+<SCRIPT language="JavaScript1.2" src="../templates/webAdmin/jsOld/validate.js"></SCRIPT>
+<script language="javascript" src="../templates/webAdmin/js/login.js"></script>
+<script language="javascript" src="../templates/webAdmin/js/internal_request.js"></script>
+<script language="JavaScript">
+		/*var allcookie = document.cookie;
+
+		function getCookie(name) { // use: getCookie("name");
+			var index = allcookie.indexOf(name + "=");
+			if (index == -1) return null;
+			index = allcookie.indexOf("=", index) + 1;
+			var endstr = allcookie.indexOf(";", index);
+			if (endstr == -1) endstr = allcookie.length;
+			return unescape(allcookie.substring(index, endstr));
+		}
+		
+		var today = new Date();
+	    var expiry = new Date(today.getTime() + 24 * 60 * 60 * 1000); // plus 28 days
+	
+	    function setCookie(name, value) { // use: setCookie("name", value);
+	    	if (value != null && value != "")
+	    	  document.cookie=name + "=" + escape(value) + "; expires=" + expiry.toGMTString();
+	          allcookie = document.cookie; // update bikky
+	    }
+		
+        function setWidthCookie()
+		{
+			if(screen.width != getCookie('screen_width'))
+				setCookie('screen_width',screen.width);
+		}*/
+		function chkStates(objImg)
+		{
+			cookieStat = GetCookie("newLoG2SpAcE");
+			if (cookieStat == 0)
+			{
+				SetCookie("newLoG2SpAcE",1);  // When OPEN THE PANEL
+				toggle('leftpanel', 0);
+				objImg.src='../templates/webAdmin/images/new/arrow_right_black.jpg';
+				objImg.title='Click to show left panel';
+			}
+			else 
+			{
+				SetCookie("newLoG2SpAcE",0);  // When HIDE THE PANEL
+				toggle('leftpanel', 1);
+				objImg.src='../templates/webAdmin/images/new/arrow_left_black.jpg';
+				objImg.title='Click to hide left panel';
+			}
+		}
+	</script>
+</head>
+<!--body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('../templates/webAdmin/images/butusermanagerover.gif','../templates/webAdmin/images/butplanmanagerover.gif','../templates/webAdmin/images/butpinmanagerover.gif','../templates/webAdmin/images/butadminmanagerover.gif','../templates/webAdmin/images/butippoolmanagerover.gif','../templates/webAdmin/images/butsystemmanagerover.gif','../templates/webAdmin/images/butmiscreportsover.gif','../templates/webAdmin/images/butnetworkutiover.gif','../templates/webAdmin/images/butlogoutover.gif','../templates/webAdmin/images/butzonemanagerover.gif'); focusLogin(); if(document.forms[0] && document.forms[0].iptype1){ toggle('staticpool', 0); } "-->
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="focusLogin(); if(document.forms[0] && document.forms[0].iptype1){ toggle('staticpool', 0); } ">
+<!-- if(document.forms[0] && document.forms[0].iptype1){ toggle('staticpool', 0); } for NewUser HTML Page -->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="100%"  align="right" class="thinborder"> 
+<!----------------------------------------------Working OK General Header -->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td background="../templates/webAdmin/images/new/gheader1.jpg" height="20" align="right">
+      <font color="#FFFFFF"><strong>log2space-v5.2</strong></font>&nbsp;&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="100%" align="left"><table width="100%"  border="0" cellspacing="0" cellpadding="0"  background="../templates/webAdmin/images/new/gheader2.jpg">
+        <tr> 
+          <td width="272" height="60">
+			<img src="../templates/webAdmin/images/new/logo.jpg">
+			<!--object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="272" height="60" id="enchante" align="middle">
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="movie" value="../templates/webAdmin/images/new/enchante.swf" />
+			<param name="quality" value="high"/><param name="bgcolor" value="#ffffff" />
+			<embed src="../templates/webAdmin/images/new/enchante.swf" quality="high" bgcolor="#ffffff" width="272" height="60" name="enchante" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+			</object-->
+
+		  <!--td width="272" height="60">&nbsp;<img src="../templates/webAdmin/images/new/exatt_logo.gif"-->
+            &nbsp;</td>
+          <td align="right">
+            <img width="120" height="100" src="../templates/webAdmin/images/new/Threesa.png">
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+
+  <tr> 
+    <td width="100%"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td background="../templates/webAdmin/images/new/gheader3.jpg" height="20" align="right"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="33%" align="left" style="padding-left:4pt"><font color="#FFFFFF"><strong>
+                  <!--Logged 
+                  in as : demo>
+                  <font color="#FFFFFF"><strong>log2space-v5.2</strong></font></strong></font></td-->
+                <!--td align="center" width="24%"><font color="#FFFFFF"><strong>Version 
+                  : log2space-v5.2</strong></font></td-->
+		<td width="50%" align="right"><font color="#FFFFFF"><strong></strong></font></td>
+                <td align="right" width="33%">
+				<font color="#FFFFFF"><strong>Date 
+                  : 27 Nov , 2020 12:25:33</strong></font>
+				  </td>
+                <td width="1%"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <!--tr> 
+          <td background="../templates/webAdmin/images/new/log2space_04.jpg" height="37" align="right"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="2%"></td>
+                <td width="22%"><font color="#FFFFFF"><strong>Version : log2space-v5.2</strong></font></td>
+                <td width="25%" align="center"><font color="#FFFFFF"><strong>Location 
+                  : Thane ()</strong></font></td>
+                <td width="25%" align="right"><font color="#FFFFFF"><strong>Logged 
+                  in As : demo</strong></font></td>
+                <td align="right" width="25%"><font color="#FFFFFF"><strong>Date 
+                  : 27 Nov , 2020 12:25:33</strong></font></td>
+                <td width="1%"></td>
+              </tr>
+            </table></td>
+          <td bgcolor="#E7F1FB" width="10"></td>
+          <td bgcolor="#5793D4" width="2"></td>
+        </tr-->
+      </table></td>
+  </tr>
+</table>
+    </td>
+  </tr>
+  <tr> 
+    <td width="100%"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="thinborder">
+        <tr> 
+          <td colspan="3"> <table cellspacing=0  cellpadding=0 border=0 width="100%">
+              <tr> 
+				<td width="16%" bgcolor="#F1F1F1" height="25">
+				</td>
+                <td align="right" bgcolor="#F1F1F1"> 
+                  <!-- E4F0FC -->
+                </td>
+                <td bgcolor="#F1F1F1" width="10"></td>
+                <!-- E7F1FB -->
+                <td bgcolor="#F1F1F1" width="2"></td>
+                <!-- 5793D4 -->
+              </tr>
+              <tr> 
+                <td bgcolor="#888888" height="1" colspan="4"></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="100%" id="leftpanel" align="right" valign="top"  width="15%"> 
+<!-- ADDED BY VIPUL -->
+<script language="JavaScript">
+	function showPolicy(pid)
+	{
+		window.open("../admin/policy.php?fromUser=true", "Policy", "toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no,location=no,width=600,height=420")
+	}
+</script>
+<!-- -->
+<table width="100%" HEIGHT="100%" border="0" cellspacing="0" cellpadding="0" background="../templates/webAdmin/images/new/gfooter.jpg">
+  <tr>
+    <td VALIGN="TOP"><table width="100%" border="0" cellspacing="0" cellpadding="0" background="../templates/webAdmin/images/new/gfooter.jpg">
+        <tr>
+          <td height="41" colspan="2" align="center"><font color="#000000" style="font-size:10px"><strong>Logged in as : demo</strong></font> </td>
+        </tr>
+        <tr onClick='javascript:window.location.href="https://login.threesainfoway.net/cgi/"' title="Account Information">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/user_manager.jpg" width="38" height="41"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Account Info.</td>
+        </tr>
+        <!--tr onClick='javascript:window.location.href="https://login.threesainfoway.net/cgi/activation.php?pageRef=user&login=demo"' title="Activate Account">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/user_manager.jpg" width="38" height="41"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Activate Account</td>
+        </tr-->
+        <tr onClick='javascript:window.location.href="https://login.threesainfoway.net/cgi/changepassword.php"' title="Change Password">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/user_manager.jpg" width="38" height="41"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Change Password</td>
+        </tr>
+
+         <tr onClick='javascript:window.location.href="https://login.threesainfoway.net/cgi/user_ledger.php"' title="User Ledger">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/user_manager.jpg" width="38" height="41"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">User Ledger</td>
+        </tr>
+		<tr onClick='javascript:window.location.href="https://login.threesainfoway.net/cgi/gatewayselection.php?action=renewal"' title="Change Payment &amp; Renewal">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/user_manager.jpg" width="38" height="41"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Renew Online</td>
+        </tr>
+	<tr onClick='javascript:window.location.href="https://login.threesainfoway.net/cgi/gatewayselection.php?action=onlinepayment"' title="Change Payment &amp; Renewal">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/user_manager.jpg" width="38" height="41"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Online Payment</td>
+        </tr>
+        <tr onClick='window.location.href="https://login.threesainfoway.net/cgi/indiusage.php"' title="Usage Summary">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/misc_reports.jpg" width="38" height="39"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Usage Summary</td>
+        </tr>
+        <tr onClick='window.location.href="https://login.threesainfoway.net/cgi/prevusage.php"' title="Previous Usage">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/misc_reports.jpg" width="38" height="39"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Previous Usage</td>
+        </tr>
+        <tr onClick='window.location.href="https://login.threesainfoway.net/cgi/contactus.php"' title="Contact Us">
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" style="cursor:pointer"><img src="../templates/webAdmin/images/new/misc_reports.jpg" width="38" height="39"></td>
+          <td height="41" background="../templates/webAdmin/images/new/bg.jpg" class="leftPanel">Contact Us</td>
+        </tr>
+        <tr onClick='window.location.href="https://login.threesainfoway.net/cgi/logout.php"' title="Logout">
+          <td height="41" bgcolor="0475BE" style="cursor:pointer"><img src="../templates/webAdmin/images/new/logout.jpg" width="38" height="37"></td>
+          <td bgcolor="0475BE" style="cursor:pointer"><font color="#FFFFFF"><strong>Logout</strong></font></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+          </td>
+          <td valign="top"> <table cellspacing=0  cellpadding=0 border=0  width="100%" height="100%">
+              <tr> 
+                <td WIDTH="2" BACKGROUND="../templates/webAdmin/images/new/verticalbar.jpg" VALIGN="top"><img NAME="toggelImg" onClick="javascript: chkStates(this);" STYLE="cursor:pointer "> </td>
+                <td valign="top"><table cellspacing=0  cellpadding=0 border=0  width="100%" height="100%">
+                    <tr> 
+                      <td height="100%" width="100%"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr> 
+                            <td valign="top"> 
+<script language="JavaScript">
+function popUp() {
+  window.open("popupmsg.php?action=deallocation&start="+START+"&end="+END, "xy", "toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no,location=no,width=450,height=200,left=300,top=50");
+}
+function chkLogin()
+{
+	doc = document.frmLogin;
+	if (doc.txtLogin.value == "" )
+	{
+		alert("Enter User Name");
+		doc.txtLogin.focus();
+		return false;
+	}
+	if (doc.txtLoginPass.value == "" )
+	{
+		alert("Enter Password");
+		doc.txtLoginPass.focus();
+		return false;
+	}
+	
+}
+</script>
+
+<div class="highlight">
+  <h2 class="itemhead">Personal Account Information</h2>
+  <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="693" HEIGHT="30">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table width="100%" align="center" cellpadding="0" cellspacing="1" class="stdTable">
+                <tr>
+                  <td width="100%"><table width="90%" align="center" cellpadding="1" cellspacing="1">
+                      <tr>
+                        <td><table width="100%" align="left" cellpadding="10" cellspacing="1" bgcolor="E1E1E1">
+                            <td  bgcolor="#F2F2F2"><div align="left"> <span class="menuLink"> Welcome to Threesa Broadband<br>
+                                  <br>
+                                  Last Successful Myaccount Login From : 103.252.4.86 on 27th Nov, 2020 @ 12:11:42<br>
+                                  <br>
+                                  Last Failed Myaccount Login From : 64.233.173.225 on 27th Nov, 2020 @ 12:11:19<br>
+                                  </span>
+                                </div></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td width="100%"><table width="100%" cellspacing="1" cellpadding="1">
+                      <tr>
+                        <td width="20%"><table width="90%" align="center" cellpadding="1" cellspacing="1">
+                            <tr>
+                              <td>  </td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td><table width="90%" align="center" cellpadding="1" cellspacing="1" CLASS="tblData">
+                      <tr>
+                        <td width="20%" class="listHeaderLeft">Name:</td>
+                        <td width="30%" class="HeaderCream"><span class="tdleft">Yogesh  Bhoir</span></td>
+                        <td width="20%" class="listHeaderLeft">Created On:</td>
+                        <td width="30%" class="HeaderCream">09 Jan,10 12:46:48</td>
+                      </tr>
+                      <tr>
+                        <td class="listHeaderLeft">Username:</td>
+                        <td class="HeaderCream">demo</td>
+                        <td class="listHeaderLeft">Renewed On:</td>
+                        <td class="HeaderCream">21 May,20 </td>
+                      </tr>
+                      <tr>
+                        <td class="listHeaderLeft">Pin Serial Number:</td>
+                        <td class="HeaderCream">1819100001</td>
+                        <td class="listHeaderLeft">Expiry Date:</td>
+                        <td class="HeaderCream">01 Dec,20 </td>
+                      </tr>
+                      <tr>
+                        <td class="listHeaderLeft">Planname:</td>
+                        <td class="HeaderCream">Free_25MbpsUnlimited_180Days</td>
+                        <td class="listHeaderLeft">Account Status:</td>
+                        <td class="HeaderCream"><strong><font color=green >Active</font></strong></td>
+                      </tr>
+                      <tr>
+                        <td class="listHeaderLeft">Login Status:</td>
+                        <td class="HeaderCream">OUT</td>
+                        <td class="listHeaderLeft">Disable Time:</td>
+                        <td class="HeaderCream">NA</td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td><table width="90%" align="center" cellpadding="0" cellspacing="1" class="tblData">
+                      <tr>
+                        <th class="listHeaderLeft" height="15" width="10%">&nbsp;</th>
+                        <th class="listHeaderLeft" width="15%"><div align="center"><span class="menuLink"> Alloted</span></div></th>
+                        <th class="listHeaderLeft" width="15%"><div align="center"><span class="menuLink"> Alloted Extra</span></div></th>
+                        <th class="listHeaderLeft" width="15%"><div align="center"><span class="menuLink">Used</span></div></th>
+                        <th class="listHeaderLeft" width="15%"><div align="center"><span class="menuLink">Balanced</span></div></th>
+                      </tr>
+                      <tr>
+                        <td class="listHeaderLeft" height="15"><span class="menuLink">Mb</span></td>
+                        <td class="HeaderCream"><div align="center">NA</div></td>
+                        <td class="HeaderCream"><div align="center">NA</div></td>
+                        <td class="HeaderCream"><div align="center">1010792.59</div></td>
+                        <td class="HeaderCream"><div align="center">NA</div></td>
+                      </tr>
+                      <tr>
+                        <td class="listHeaderLeft" height="15"><span class="menuLink">Hr</span></td>
+                        <td class="HeaderCream"><div align="center">NA</div></td>
+                        <td class="HeaderCream"><div align="center">NA</div></td>
+                        <td class="HeaderCream"><div align="center">2863:53:58</div></td>
+                        <td class="HeaderCream"><div align="center">NA</div></td>
+                      </tr>
+                      <tr>
+                        <td class="listHeaderLeft" height="15"><span class="menuLink">Days</span></td>
+                        <td class="HeaderCream"><div align="center">194</div></td>
+                        <td class="HeaderCream"><div align="center">NA</div></td>
+                        <td class="HeaderCream"><div align="center">190</div></td>
+                        <td class="HeaderCream"><div align="center">4</div></td>
+                      </tr>
+                    </table>
+				</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr>
+      <td align="center">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+                            </td>
+                            <td bgcolor="#E7F1FB" width="3"></td>
+                            <td bgcolor="#5175C9" width="2"></td>
+                            <!-- 5793D4 -->
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td> <table width="100%" height="15" border="0" align="center" cellpadding="0" cellspacing="0" class="thinborder">
+        <tr> 
+          <td align="right"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="../templates/webAdmin/images/new/gfooter.jpg">
+	<tr>
+<td width="10%">&nbsp;</td>
+<td width="30%">
+                        <a href='terms.php' class=menuLink target=_blank>Terms &amp; Conditions</a> | <a href='aboutus.php' class=menuLink target=_blank>About Us</a>
+                </td>		
+    <td width="100%" class="lightgrey" height="30" align="right" valign="middle"><small>Powered 
+      by </small><a href="http://www.spacecom.co.in" class="menuLink" target="_blank"><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif" size="1"><strong>Spacecom Software LLP.</strong> &nbsp;</font> </a>
+      <!-- Powered By Spacecom Broadband Networks Ltd&nbsp; -->
+    </td>
+	</tr>
+</table>
+<!--table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+  <td width="16%" bgcolor="C7DBF1">&nbsp;</td>
+  <td bgcolor="#5793D4" align="right" class="lightgrey">Powered By Spacecom Broadband Networks Ltd&nbsp;</td>
+  <td width="10" bgcolor="#E7F1FB">&nbsp;</td>
+  <td width="2" bgcolor="#5793D4"></td>
+</tr>
+</table-->
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script LANGUAGE="JavaScript">
+	cookieStat = GetCookie("newLoG2SpAcE");
+	/* IF STATUS = 1 THEN HIDE PANEL ELSE SHOW PANEL */
+	if(cookieStat == 1) {
+		el = document.getElementById('leftpanel');
+		el.style.display = 'none';
+		document.toggelImg.src='../templates/webAdmin/images/new/arrow_right_black.jpg';
+	}
+	else {
+		document.toggelImg.src='../templates/webAdmin/images/new/arrow_left_black.jpg';
+	}
+	//		 onMouseMove="this.src='../templates/website/images/new/arrow_left_black.jpg'" onMouseOut="this.src='../templates/website/images/new/arrow_left_white.jpg'"
+</script>
+</body>
+</html>

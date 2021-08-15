@@ -1,0 +1,111 @@
+/* must preFix with lfm */
+
+input.lfmButton {
+	background-color:#3969AD;border-color:#ddddff #C1C1C1 #Black #ddddff;color:#fff;
+	font:bold 10px verdana;border-style:outset; border-width:2px;
+	cursor:pointer;cursor:hand;
+	/*background-color: #3969AD;
+	border-top-color: #ddddff;
+	border-left-color: #ddddff;
+	border-bottom-color:Black;
+	border-right-color:Black;
+	font-weight: 600;
+	font-size: 11px;
+	color:#ffffff;
+	cursor:hand;
+	/*width:80px;*/
+}
+
+input.lfmButtonBig {
+	background-color: #3969AD;
+	border-top-color: #ddddff;
+	border-left-color: #ddddff;
+	border-bottom-color:Black;
+	border-right-color:Black;
+	font-weight: 600;
+	font-size: 11px;
+	color:#ffffff;
+	cursor:hand;
+	width:100px;
+}
+
+
+input.lfmButtonBiggest {
+	background-color: #3969AD;
+	border-top-color: #ddddff;
+	border-left-color: #ddddff;
+	border-bottom-color:Black;
+	border-right-color:Black;
+	font-weight: 600;
+	font-size: 11px;
+	color:#ffffff;
+	cursor:hand;
+	width:160px;
+}
+
+input.nrlButton {
+	background-color:#E6E6E6;border-color:#FFF #C1C1C1 #C1C1C1 #FFF;color:#666;
+	font:bold 10px verdana;border-style:outset; border-width:2px;
+	cursor:pointer;cursor:hand;
+}
+
+input.stdButton {
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-size		: 10px;
+	font-weight		: bold;
+	color			: #020571;
+	border-right	: #010369 1px solid;
+	border-top		: #010369 1px solid;
+	border-left		: #010369 1px solid;
+	border-bottom	: #010369 1px solid;
+	background-color: #8F91CD;
+}
+
+input.yellowButton {
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-size		: 10px;
+	font-weight		: bold;
+	color			: #010369;
+	border-right	: #6365CE 1px solid;
+	border-top		: #6365CE 1px solid;
+	border-left		: #6365CE 1px solid;
+	border-bottom	: #6365CE 1px solid;
+	background-color: #FFCF00;
+	cursor			: hand;
+}
+
+input.adminButton {
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-size		: 10px;
+	font-weight		: bold;
+	color			: #000000;
+	background-color: #FFFFFF; 
+	border-style	: outset; 
+	border-width	: 1
+}
+
+/* Check Box */
+input.stdCheckBox {
+   	border			: 0px solid #000099;
+}
+
+input.stdRadion {
+   	border			: 0px solid #000099;
+}
+
+pageHeader{
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-size		: 8pt;
+	font-weight		: bold;
+	color			: #FF0000;
+	filter			: shadow(color=#AAAAAA, direction=135);
+}
+td.HeaderCream {
+	font-family		: Verdana, Arial, Helvetica, sans-serif;
+	font-size		: 8pt;
+	font-weight		: normal;
+	color			: #000000;
+	text-align		: left;
+	background-color	: #F6F7F2;
+	height			: 18px;
+}
