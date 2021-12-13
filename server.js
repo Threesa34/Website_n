@@ -59,9 +59,9 @@ routes.configure(app);
 
 const hostname = 'threesainfoway.net';
 
- const cert = fs.readFileSync('../../etc/letsencrypt/live/threesainfoway.net/cert.pem');
-const ca = fs.readFileSync('../../etc/letsencrypt/live/threesainfoway.net/chain.pem');
-const key = fs.readFileSync('../../etc/letsencrypt/live/threesainfoway.net/privkey.pem');
+ const cert = fs.readFileSync(path.resolve('../../etc/letsencrypt/live/threesainfoway.net/cert.pem'));
+const ca = fs.readFileSync(path.resolve('../../etc/letsencrypt/live/threesainfoway.net/chain.pem'));
+const key = fs.readFileSync(path.resolve('../../etc/letsencrypt/live/threesainfoway.net/privkey.pem'));
 
 
 let httpsOptions = {
