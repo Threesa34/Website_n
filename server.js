@@ -59,25 +59,34 @@ routes.configure(app);
 
 const hostname = 'threesainfoway.net';
 
- const cert = fs.readFileSync(path.resolve('../../etc/letsencrypt/live/threesainfoway.net/cert.pem'));
-const ca = fs.readFileSync(path.resolve('../../etc/letsencrypt/live/threesainfoway.net/chain.pem'));
-const key = fs.readFileSync(path.resolve('../../etc/letsencrypt/live/threesainfoway.net/privkey.pem'));
+   /* const cert = fs.readFileSync(path.resolve('../../etc/letsencrypt/letsencrypt_old/live/threesainfoway.net/cert.pem'));
+const ca = fs.readFileSync(path.resolve('../../etc/letsencrypt/letsencrypt_old/live/threesainfoway.net/chain.pem'));
+const key = fs.readFileSync(path.resolve('../../etc/letsencrypt/letsencrypt_old/live/threesainfoway.net/privkey.pem')); */
+
+//  const cert = fs.readFileSync(path.resolve('./zerossl2022/certificate.crt'));
+//  const ca = fs.readFileSync(path.resolve('./zerossl2022/ca_bundle.crt'));
+//  const key = fs.readFileSync(path.resolve('./zerossl2022/private.key'));
+
+ const cert = fs.readFileSync(path.resolve('./starssl/STAR.threesainfoway.net.crt'));
+  const ca = fs.readFileSync(path.resolve('./starssl/STAR.threesainfoway.net.ca-bundle'));
+  const key = fs.readFileSync(path.resolve('./starssl/private.key'));
 
 
-let httpsOptions = {
-    cert: cert, // fs.readFileSync('./ssl/example.crt');
+  
+
+ let httpsOptions = { cert: cert, // fs.readFileSync('./ssl/example.crt');
     ca: ca, // fs.readFileSync('./ssl/example.ca-bundle');
     key: key // fs.readFileSync('./ssl/example.key');
  };
+ 
 
+ //let httpsOptions = {};
 
-// let httpsOptions = {};
-
- const httpServer = http.createServer((req, res) => {
+  const httpServer = http.createServer((req, res) => {
     res.statusCode = 301;
     res.setHeader('Location', `https://${hostname}${req.url}`);
     res.end(); // make sure to call send() or end() to send the response
- });
+ }); 
 
  const httpsServer = https.createServer(httpsOptions, app);
  
@@ -95,9 +104,9 @@ let httpsOptions = {
 
 //  console.log('Server listening on port ' + JSON.stringify(httpsServer));
 
-/*  var server = app.listen(80, function () {
+/*   var server = app.listen(80, function () {
     console.log('Server listening on port ' + server.address().port);
-});   */
+});   */ 
 
 
 

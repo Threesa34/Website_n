@@ -623,7 +623,7 @@
                         </header>
                          <ul class="ms-hero-material-list">
                          <h1 class="animated fadeInLeft animation-delay-15">Introducing Diamond 10.0</br>
-                            <strong style="font-size:70px;"><i>100&nbsp;<sub style="font-size:40px;">MBPS</sub></i></strong></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>&#8377;</sup><strong>1200*</strong></h1>
+                            <strong style="font-size:70px;"><i>300&nbsp;<sub style="font-size:40px;">MBPS</sub></i></strong></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>&#8377;</sup><strong>99*</strong></h1>
                          
                         </ul>
                       </div>
@@ -633,12 +633,12 @@
                   <div class="carousel-item">
                     <div class="carousel-caption">
                       <div class="ms-hero-material-text-container">
-                        <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
+                        <!-- <header class="ms-hero-material-title animated slideInLeft animation-delay-5">
                           <h1 class="animated fadeInLeft animation-delay-15">Buy For 6 Months
                             <strong></strong>.</h1>
                           <h2 class="animated fadeInLeft animation-delay-18">Get 6 Months
                             <span class="color-warning">Free</span>.</h2>
-                        </header>
+                        </header> -->
 						   <ul class="ms-hero-material-list">
                          <h1 class="animated fadeInLeft animation-delay-15">For any <strong>Complaints </strong>or<strong> Payments</strong> use our <strong>Mobile Application </strong></br>
                             <strong style="font-size:40px;cursor:pointer;" class="color-warning" onclick="location.href='https://play.google.com/store/apps/details?id=in.spacecom.log2space.client.threesa'">Threesa Infoway Pvt Ltd</strong></h1>
@@ -695,15 +695,18 @@
             <div class="price-table price-table-{{data.table_class}} wow zoomInUp animation-delay-2">
               <header class="price-table-header">
                 <span class="price-table-category">{{data.heading}}</span>
-                <h3>
+                <!-- <h3>
                   <sup><i class="fa fa-inr"></i></sup>{{data.offer_amount | number:2}}
                   <sub>{{data.period}}</sub>
+                </h3> -->
+                <h3>
+                  <sup> <i style="font-size:20px;" class="fa fa-tachometer"></i></sup>{{data.speed}}
                 </h3>
               </header>
               <div class="price-table-body">
                 <ul class="price-table-list">
-                  <li>
-                    <i style="font-size:20px;" class="fa fa-tachometer"></i><span style="font-size:20px;">{{data.speed}}</span></li>
+                  <!-- <li>
+                    <i style="font-size:20px;" class="fa fa-angle-double-right"></i><span style="font-size:20px;">{{data.speed}}</span></li> -->
                   <li ng-repeat="obj in data.details"  ng-bind-html="obj">
                     <!-- <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  500.00/-</b> -->
 					</li>
@@ -741,7 +744,7 @@
 								</div>
 								<div class="statistic-box__details">
 									<img src="/assets/img/wifi.png"  style="height:50px;">
-									<h4 class="statistic-box__title">40,000+</h4>
+									<h4 class="statistic-box__title">100+</h4>
 									<div class="statistic-box__content">
 										WIRELESS USERS
 									</div>
@@ -775,7 +778,7 @@
 								</div>
 								<div class="statistic-box__details">
 								<img src="/assets/img/wireless-router.png"  style="height:50px;">
-									<h4 class="statistic-box__title">25,000+</h4>
+									<h4 class="statistic-box__title">40,000+</h4>
 									<div class="statistic-box__content">
 										BROADBAND USERS
 									</div>
@@ -791,7 +794,7 @@
 								</div>
 								<div class="statistic-box__details">
 								<img src="/assets/img/networking.png"  style="height:50px;">
-									<h4 class="statistic-box__title">66,000+</h4>
+									<h4 class="statistic-box__title">45,000+</h4>
 									<div class="statistic-box__content">
 										TOTAL USERS
 									</div>
@@ -1016,7 +1019,10 @@
             </div>
            <div class="col-lg-7 col-md-7 ms-footer-col" style="background:red;">
            <div class="row">
-		    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15069.474781095545!2d72.9638529!3d19.2227569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f5f3337bac16504!2sThreesa+Broadband!5e0!3m2!1sen!2sin!4v1520418241301"  frameborder="0" style="border:0;width:100rem;height:500px;" allowfullscreen></iframe>
+		    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15069.474781095545!2d72.981430!3d19.210830!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f5f3337bac16504!2sThreesa+Broadband!5e0!3m2!1sen!2sin!4v1520418241301"  frameborder="0" style="border:0;width:100rem;height:500px;" allowfullscreen></iframe>
+
+        <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15069.474781095545!2d72.9638529!3d19.2227569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f5f3337bac16504!2sThreesa+Broadband!5e0!3m2!1sen!2sin!4v1520418241301"  frameborder="0" style="border:0;width:100rem;height:500px;" allowfullscreen></iframe> -->
+
 		   </div>
 		   </div>
 		   </div>
@@ -1026,17 +1032,17 @@
                 <div class="ms-footbar-title">
                    <img src="/assets/img/threesa_logo_white_small.png" alt=""> 
                   <h3 class="no-m ms-site-title">
-                    <span>Threesa Infoway </span> <font size="4px"> Pvt. Ltd.</font>
+                    <span>Threesa Infoway </span> <span size="4px"> Pvt. Ltd.</span>
                   </h3>
                 </div>
                 <address class="no-mb">
                   <p>
-                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Shop No.4, 1st Floor, Anand Laghu Sankul, Near Siddhachal Phase 4, Vasant Vihar, Thane, Maharashtra, India-400610</p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> 503, 5<sup>th</sup> Floor, A Wing, Dev Corpora, Cadbury junction, Thane (w), Maharashtra, India-400601</p>
                  
                   <p>
                     <i class="color-info-light zmdi zmdi-email mr-1"></i>
-                    <a href="mailto:info@threesainfoway.net">info@threesainfoway.net</a> &nbsp; <i class="color-royal-light zmdi zmdi-phone mr-1"></i>022-68383838 &nbsp; <i class="color-success-light fa fa-fax mr-1"></i>9768635000 / 8652769000&nbsp;
-                    <a href="https://api.whatsapp.com/send?phone=919152915234" title="click for enquiry on whatsapp"><i class="color-success-light zmdi zmdi-whatsapp mr-1"></i>9152915234</a>   &nbsp; <a href="tel:+917039012000"><i class="color-royal-light zmdi zmdi-phone mr-1"></i> 7039012000 (FOR COMMERCIAL ENQUIRIES)</a>
+                    <a href="mailto:info@threesainfoway.net">info@threesainfoway.net</a> &nbsp; <i class="color-royal-light zmdi zmdi-phone mr-1"></i>022-68383838 &nbsp; <i class="color-success-light fa fa-fax mr-1"></i>8652769000&nbsp;
+                    <a href="https://api.whatsapp.com/send?phone=919152915234" title="click for enquiry on whatsapp"><i class="color-success-light zmdi zmdi-whatsapp mr-1"></i>9152915234</a>   &nbsp; <a href="tel:+919768635000"><i class="color-royal-light zmdi zmdi-phone mr-1"></i> 9768635000 (FOR COMMERCIAL ENQUIRIES)</a>
                   </p>
                 </address>
               </div>

@@ -49,50 +49,54 @@ $scope.urlParameters = getUrlVars();
 
     $scope.internetPlans = [{
         heading: "ROCKET",
-        offer_amount: 3100,
-        period: "/yr.",
-        speed: "Speed 25 Mbps",
+        offer_amount: 500,
+        period: "/mo.",
+        speed: "100 Mbps",
         table_class: "info",
         details: [
-            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  400.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2200.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  3100.00/-</b>',
+            ' <i class="fa fa-angle-double-right"></i>You have to pay only <b>&#8377;  310.00 per month</b> on yearly subscription',
+            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  500.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 6 months @ <b>&#8377;  2,200.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 12 months @ <b>&#8377;  3,710.00</b>',
             '<i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.'
         ]
     }, {
         heading: "ROCKET 2.0",
-        offer_amount: 3720,
-        period: "/yr.",
-        speed: "Speed 50 Mbps",
+        offer_amount: 700,
+        period: "/mon.",
+        speed: "200 Mbps",
         table_class: "success",
         details: [
-            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  620.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  2480.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  3720.00/-</b>',
+            ' <i class="fa fa-angle-double-right"></i>You have to pay only <b>&#8377;  400.00 per month</b> on yearly subscription',
+            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  700.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 6 months @ <b>&#8377;  3,100.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 12 months @ <b>&#8377; 4,800.00</b>',
             '<i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.'
         ]
     }, {
         heading: "AGNI 4.0",
-        offer_amount: 4800,
-        period: "/yr.",
-        speed: "Speed 100 Mbps",
+        offer_amount: 900,
+        period: "/mo.",
+        speed: "500 Mbps",
         table_class: "warning",
         details: [
-            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  800.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  3200.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  4800.00/-</b>',
+            ' <i class="fa fa-angle-double-right"></i>You have to pay only <b>&#8377;  580.00 per month</b> on yearly subscription',
+            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  900.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 6 months @ <b>&#8377;  4,000.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 12 months @ <b>&#8377;  6,960.00</b>',
             '<i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.'
         ]
     }, {
         heading: "AGNI 7.0",
-        offer_amount: 6960,
-        period: "/yr.",
-        speed: "Speed 200 Mbps",
+        offer_amount: 1600,
+        period: "/mo.",
+        speed: "1 Gbps",
         table_class: "royal",
         details: [
-            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  1160.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 4 months & Get 2 months free @ <b>&#8377;  4640.00/-</b>',
-            '<i class="fa fa-angle-double-right"></i>Pay for 6 months & Get 6 months free @ <b>&#8377;  6960.00/-</b>',
+            ' <i class="fa fa-angle-double-right"></i>You have to pay only <b>&#8377;  1,111.00 per month</b> on yearly subscription',
+            ' <i class="fa fa-angle-double-right"></i>Monthly @ <b>&#8377;  1,600.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 6 months @ <b>&#8377;  6,960.00</b>',
+            '<i class="fa fa-angle-double-right"></i>Pay for 12 months @ <b>&#8377; 13,332.00</b>',
             '<i class="fa fa-angle-double-right"></i>GST 18% will be extra as applicable to all plans.'
         ]
     }];
