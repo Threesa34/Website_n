@@ -67,9 +67,13 @@ const key = fs.readFileSync(path.resolve('../../etc/letsencrypt/letsencrypt_old/
 //  const ca = fs.readFileSync(path.resolve('./zerossl2022/ca_bundle.crt'));
 //  const key = fs.readFileSync(path.resolve('./zerossl2022/private.key'));
 
- const cert = fs.readFileSync(path.resolve('./starssl/STAR.threesainfoway.net.crt'));
-  const ca = fs.readFileSync(path.resolve('./starssl/STAR.threesainfoway.net.ca-bundle'));
-  const key = fs.readFileSync(path.resolve('./starssl/private.key'));
+  const ca = fs.readFileSync(path.resolve('./STAR.threesainfoway.net_cert-2/STAR.threesainfoway.net.ca-bundle'));
+  const cert = fs.readFileSync(path.resolve('./STAR.threesainfoway.net_cert-2/STAR.threesainfoway.net.crt'));
+   const key = fs.readFileSync(path.resolve('./threesainfoway.net-1/private.key'));
+
+ //const cert = fs.readFileSync(path.resolve('./starssl/STAR.threesainfoway.net.crt'));
+  //const ca = fs.readFileSync(path.resolve('./starssl/STAR.threesainfoway.net.ca-bundle'));
+  //const key = fs.readFileSync(path.resolve('./starssl/private.key'));
 
 
   

@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<title>Threesa Infoway Pvt. Ltd.</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="description" content="Threesa Infoway Pvt. Ltd. helps you to connect with world.we provide unbreakable high speed internet connectivity for you home or organization">
-<meta name="keywords" content="internet service providers,internet service provider near me,internet service provider in thane,internet service in thane,wifi service near me,wifi service provider near me,wifi services,Broadband Internet Service,broadband plans in thane,broadband service near me,broadband in thane,wireless internet service providers near me,Internet Service Providers For Corporate,internet service providers for home,ftth internet service provider,internet leased line service,leased line providers in thane">
-   <meta name="google" content="notranslate"/>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="Threesa Infoway Pvt. Ltd. helps you to connect with world.we provide unbreakable high speed internet connectivity for you home or organization">
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Threesa Infoway Pvt. Ltd." />
+        <meta property="og:description" content="Threesa Infoway Pvt. Ltd. helps you to connect with world.we provide unbreakable high speed internet connectivity for you home or organization" />
+        <meta name="keywords" content="internet service providers,internet service provider near me,internet service provider in thane,internet service in thane,wifi service near me,wifi service provider near me,wifi services,Broadband Internet Service,broadband plans in thane,broadband service near me,broadband in thane,wireless internet service providers near me,Internet Service Providers For Corporate,internet service providers for home,ftth internet service provider,internet leased line service,leased line providers in thane, Top 10 internet service providers in thane, Top 10 internet service providers in thane west,Top 5 internet service providers in thane west, Top 5 internet service providers in thane, Best internet speed providers in thane, Best internet speed providers in thane west, best internet service providers in thane, best internet service providers in thane west, Low price internet service providers in thane, Low price internet service providers in thane west, Best internet service provides near thane west, High speed internet service providers in thane, Number one internet service provider in thane, Number one internet service provider in thane west">
+        
+         <!-- <meta property="og:keywords" content="internet service providers,internet service provider near me,internet service provider in thane,internet service in thane,wifi service near me,wifi service provider near me,wifi services,Broadband Internet Service,broadband plans in thane,broadband service near me,broadband in thane,wireless internet service providers near me,Internet Service Providers For Corporate,internet service providers for home,ftth internet service provider,internet leased line service,leased line providers in thane, Top 10 internet service providers in thane, Top 10 internet service providers in thane west,Top 5 internet service providers in thane west, Top 5 internet service providers in thane, Best internet speed providers in thane, Best internet speed providers in thane west, best internet service providers in thane, best internet service providers in thane west, Low price internet service providers in thane, Low price internet service providers in thane west, Best internet service provides near thane west, High speed internet service providers in thane, Number one internet service provider in thane, Number one internet service provider in thane west"> -->
+        <meta property="og:image" content="https://threesainfoway.net/assets/img/Threesa_Logo.png" />
+      
+        <meta property="og:image" content="https://threesainfoway.net/assets/img/Threesa_Logo.png" />
+      <meta property="og:image:secure_url" content="https://threesainfoway.net/assets/img/Threesa_Logo.png" /> 
+      <meta property="og:image:type" content="image/png" /> 
+      <meta property="og:image:width" content="400" /> 
+      <meta property="og:image:height" content="300" />  <meta name="google" content="notranslate"/>
     <link rel="shortcut icon" href="./assets/img/Threesa_Logo.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -113,6 +123,12 @@
               <label class="control-label" for="ms-form-pass-rn"><span style="color:black">Message</span></label>
               <input type="text" ng-model="customer.custome_message" id="ms-form-pass-rn" class="form-control"> </div>
           </div>
+
+         
+              
+              <input type="hidden" ng-model="customer.source" id="ms-form-pass-rn" class="form-control"> </div>
+         
+
          <center> <a href="javascript:void(0)" ng-click="submitNewEnquiry()" class="wave-effect-light btn btn-raised btn-google">
           Submit</a></center>
         </fieldset>
@@ -161,10 +177,26 @@ var appEntity = angular.module('appEntity', ['ui.bootstrap', 'ngSanitize']);
 
 appEntity.controller('entityController', function ($window, $http, $scope) {
 
+  var url_string = window.location.href; //window.location.href
+  var url = new URL(url_string);
+  var source = url.searchParams.get("source");
+  
+  $scope.customer = {};
+  $scope.customer['source'] = source;
+
   $scope.submitNewEnquiry = function(){
     if($scope.customer != undefined)
     {
-        $scope.customer.source = 'Website';
+
+      if($scope.customer.source == undefined || $scope.customer.source == null || $scope.customer.source == '')
+      {  $scope.customer.source = 'Website'; }
+      else{
+        if(source != undefined && source != null && source != '')
+        {
+          $scope.customer.source = source;
+        }
+      }
+        
         $http({
                 method: 'POST',
                 url: '/api/AddNewEnquiry',

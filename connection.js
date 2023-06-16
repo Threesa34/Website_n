@@ -10,7 +10,7 @@ function Connection() {
       host: 'localhost',
       user: 'root',
       password: '',
-      database: 'threesa'
+      database: 'th_hrms'
     });
   };
   this.acquire = function(callback) {
